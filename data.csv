@@ -1,0 +1,205 @@
+label,link
+AWS S3,https://docs.aws.amazon.com/pt_br/AmazonS3/latest/userguide/Welcome.html
+AWS RDS,https://docs.aws.amazon.com/pt_br/AmazonRDS/latest/UserGuide/Welcome.html
+AWS OpenSearch,https://docs.aws.amazon.com/pt_br/opensearch-service/latest/developerguide/gsg.html
+Apache Airflow,https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html
+Apache Airflow,https://www.sparkcodehub.com/apache-airflow-tutorial
+Pandas,https://www.datacamp.com/pt/tutorial/pandas
+Pandas,https://harve.com.br/blog/programacao-python-blog/pandas-python-vantagens-e-como-comecar/
+Pandas,https://pandas.pydata.org/docs/user_guide/10min.html
+Pandas,https://medium.com/@dev.daniel.amorim/python-pandas-24ab58577de5
+Pandas,https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/
+Pandas,https://www.w3schools.com/python/pandas/default.asp
+Banco de Dados orientados à Chave Valor com Redis,https://apidog.com/pt/blog/redis-tutorial-for-beginners/
+Banco de Dados orientados à Chave Valor com Redis,https://www.w3resource.com/redis/index.php
+Banco de Dados orientados à Chave Valor com Redis,https://www.tutorialspoint.com/redis/index.htm
+Atlas_mongodb,https://www.mongodb.com/pt-br/docs/manual/data-modeling/
+Atlas_mongodb,https://medium.com/mongodb-tutorial/introduction-to-mongodb-and-nosql-databases-ec0ab1097e7c
+Atlas_mongodb,https://www.mongodb.com/pt-br/docs/atlas/getting-started/
+Atlas_mongodb,https://www.mongodb.com/pt-br/docs/manual/tutorial/getting-started/
+Atlas_mongodb,https://www.mongodb.com/pt-br/docs/manual/core/crud/
+Atlas_mongodb,https://www.mongodb.com/pt-br/docs/manual/aggregation/
+Atlas_mongodb,https://www.tutorialspoint.com/mongodb/index.htm
+Atlas_mongodb,https://www.geeksforgeeks.org/mongodb-tutorial/
+Atlas_mongodb,https://www.geeksforgeeks.org/mongodb-aggregation-lookup/
+Cassandra,https://www.simplilearn.com/tutorials/big-data-tutorial/cassandra-data-model
+Cassandra,https://www.instaclustr.com/blog/cassandra-data-modeling/
+Cassandra,https://cassandra.apache.org//quickstart.html
+Cassandra,https://www.tutorialspoint.com/cassandra/index.htm
+Cassandra,https://www.guru99.com/pt/cassandra-tutorial.html
+Cassandra,https://cassandra.apache.org/doc/stable/cassandra/getting_started/index.html
+Apache HBase,https://www.tutorialspoint.com/hbase/index.htm
+Apache HBase,https://medium.com/hands-on-apache-hbase/an-introduction-to-apache-hbase-2cdd1d9ff13
+Apache HBase,https://www.guru99.com/pt/hbase-tutorials.html
+Apache HBase,https://eecs.csuohio.edu/~sschung/cis612/HBaseTutorial.pdf
+Apache HBase,https://www.cloudduggu.com/hbase/
+Formatos de arquivos colunares: Parquet e ORC,https://www.upsolver.com/blog/the-file-format-fundamentals-of-big-data
+Formatos de arquivos colunares: Parquet e ORC,https://medium.com/@ganeshnv0/avro-parquet-and-orc-file-format-comparison-ff776d375c7e
+Formatos de arquivos colunares: Parquet e ORC,https://medium.com/rescuepoint/tipos-de-dados-em-bigdata-6ab0debec30a
+Formatos de arquivos colunares: Parquet e ORC,https://www.linkedin.com/pulse/comparative-analysis-avro-parquet-orc-understanding-differences-bose/
+Formatos de arquivos colunares: Parquet e ORC,https://www.snowflake.com/trending/avro-vs-parquet/
+Formatos de arquivos colunares: Parquet e ORC,https://www.starburst.io/data-glossary/open-file-formats/
+Formatos de arquivos colunares: Parquet e ORC,https://blog.det.life/choosing-the-right-big-data-file-format-avro-vs-parquet-vs-orc-c868ffbe5a4e
+Formatos de arquivos colunares: Parquet e ORC,https://learncsdesigns.medium.com/understanding-apache-parquet-d722645cfe74
+Formatos de arquivos colunares: Parquet e ORC,https://arrow.apache.org/docs/python/parquet.html
+Formatos de arquivos colunares: Parquet e ORC,https://arrow.apache.org/docs/python/orc.html
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://medium.com/data-hackers/lakehouse-unindo-o-data-lake-e-o-data-warehouse-1428be2dda21
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://medium.com/@edilsonathaydejunior/lakehouse-a-solu%C3%A7%C3%A3o-inovadora-para-o-futuro-dos-dados-cd96f4c19255
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.researchgate.net/publication/382912985_Analise_da_relevancia_da_arquitetura_de_implementacao_de_Delta_Lake_para_banco_de_dados_empresariais
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://repositorio.unifesp.br/server/api/core/bitstreams/e02fb1d5-7ce9-463e-9254-894ddfd632c0/content
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.databricks.com/br/blog/2020/01/30/what-is-a-data-lakehouse.html
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.databricks.com/br/glossary/medallion-architecture
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.dataside.com.br/dataside-community/big-data/afinal-o-que-e-a-arquitetura-medalhao
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://learn.microsoft.com/pt-br/azure/databricks/lakehouse/medallion
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://learn.microsoft.com/pt-br/azure/databricks/lakehouse/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://cloud.google.com/discover/what-is-a-data-lakehouse?hl=pt-BR
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://learn.microsoft.com/pt-br/fabric/data-engineering/lakehouse-overview
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.ibm.com/br-pt/topics/data-lakehouse
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://learn.microsoft.com/pt-br/fabric/data-engineering/tutorial-build-lakehouse
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://learn.microsoft.com/pt-br/fabric/data-engineering/lakehouse-overview
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://learn.microsoft.com/pt-br/fabric/data-engineering/tutorial-lakehouse-introduction
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://eskelsen.medium.com/uma-jornada-na-constru%C3%A7%C3%A3o-de-um-data-lakehouse-2cf610c71359
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://eskelsen.medium.com/uma-jornada-na-constru%C3%A7%C3%A3o-de-um-data-lakehouse-parte-2-arquitetura-c2999c0a344d
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://eskelsen.medium.com/uma-jornada-na-constru%C3%A7%C3%A3o-de-um-data-lakehouse-parte-3-ingest%C3%A3o-de-dados-com-cdc-e-debezium-4aa1adb02f28
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://aws.amazon.com/pt/blogs/big-data/build-a-lake-house-architecture-on-aws/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.linkedin.com/pulse/projetos-de-arquitetura-data-lakehouse-jose-r-f-junior/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.datacamp.com/pt/blog/what-is-a-data-lakehouse
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse,https://www.dremio.com/topics/data-lakehouse/architecture/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://datameshlearning.com/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://aws.amazon.com/pt/what-is/data-mesh/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://medium.com/data-hackers/data-mesh-indo-al%C3%A9m-do-data-lake-e-data-warehouse-465d57539d89
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://www.ibm.com/think/topics/data-mesh
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://www.datamesh-architecture.com/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://martinfowler.com/articles/data-mesh-principles.html
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://www.montecarlodata.com/blog-what-is-a-data-mesh-and-how-not-to-mesh-it-up/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/architectures/what-is-data-mesh
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://zup.com.br/blog/data-mesh
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://triggo.ai/blog/data-mesh-importancia-dominio-dados/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://triggo.ai/blog/os-4-principios-do-data-mesh/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://docs.aws.amazon.com/pdfs/prescriptive-guidance/latest/strategy-data-mesh/strategy-data-mesh.pdf
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://aws.amazon.com/pt/what-is/data-mesh/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://developer.confluent.io/courses/data-mesh/intro/
+Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh,https://carlosgrande.me/my-data-mesh-thesis/
+Arquitetura Data hub,https://blog.dsacademy.com.br/como-diferenciar-data-hub-data-lake-e-data-warehouse/
+Arquitetura Data hub,https://www.actian.com/blog/data-hub/what-is-an-enterprise-data-hub/
+Arquitetura Data hub,https://www.altexsoft.com/blog/data-hub/
+Arquitetura Data hub,https://medium.com/@LumenData/why-data-hub-is-essential-for-a-solid-data-foundation-cb336ed6ef55
+Arquitetura Data hub,https://medium.com/thefork/data-hub-architecture-is-the-new-trend-for-data-integration-37868fb83d7b
+Arquitetura Data hub,https://www.progress.com/marklogic/comparisons/data-hub-vs-data-warehouse
+Arquitetura Data hub,https://kb.elipse.com.br/historiadores-pims-data-lakes-e-data-hubs-na-transformacao-digital-industrial/
+Arquitetura Data hub,https://aws.amazon.com/pt/blogs/big-data/part-1-deploy-datahub-using-aws-managed-services-and-ingest-metadata-from-aws-glue-and-amazon-redshift/
+Arquitetura Data hub,https://aws.amazon.com/pt/blogs/big-data/part-2-deploy-datahub-using-aws-managed-services-and-ingest-metadata-from-aws-glue-and-amazon-redshift/
+Apache Spark,https://www.devmedia.com.br/introducao-ao-apache-spark/34178
+Apache Spark,https://medium.com/gabriel-luz/spark-101-introdu%C3%A7%C3%A3o-ao-framework-de-processamento-de-dados-distribu%C3%ADdos-1f959e596024
+Apache Spark,https://medium.com/@ingoreichertjr/spark-sql-utilizando-sql-em-uma-grande-massa-de-dados-30548b34abdb
+Apache Spark,https://didatica.tech/o-que-e-apachespark-e-como-utilizar-na-pratica-aprenda-agora/
+Apache Spark,https://didatica.tech/tudo-sobre-pyspark-tutorial-para-iniciantes/
+Apache Spark,https://www.tutorialspoint.com/spark_sql/spark_sql_dataframes.htm
+Apache Spark,https://sparkbyexamples.com/pyspark/pyspark-sql-with-examples/
+Apache Spark,https://docs.databricks.com/en/pyspark/basics.html
+Apache Spark,https://www.devmedia.com.br/apache-spark-trabalhando-com-sql-em-aplicacoes-big-data/34251
+Apache Spark,https://databecome.com.br/introducao-ao-pyspark-uma-visao-geral/
+Apache Spark,https://annefou.github.io/pyspark/04-pyspark_sql/
+Apache Spark,https://www.codecademy.com/learn/big-data-pyspark/modules/spark-data-frames-with-pyspark-sql/cheatsheet
+Apache Spark,https://medium.com/codex/efficient-data-processing-with-pyspark-and-sparksql-3a354b680887
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://medium.com/starschema-blog/open-table-formats-for-efficient-data-processing-delta-lake-vs-iceberg-vs-hudi-b1107141e9a6
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://www.datacamp.com/tutorial/apache-iceberg
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://quickstarts.snowflake.com/guide/getting_started_iceberg_tables/index.html#0
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://www.starburst.io/tutorials/create-and-populate-apache-iceberg-tables/#0
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://iomete.com/the-ultimate-guide-to-apache-iceberg
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://iomete.com/resources/reference/iceberg-tables/getting-started
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://docs.databricks.com/en/delta/tutorial.html
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://www.onehouse.ai/blog/apache-hudi-vs-delta-lake-vs-apache-iceberg-lakehouse-feature-comparison
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://delta.io/learn/getting-started/
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://medium.com/@habbema/delta-lake-45af15dc720a
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://medium.com/@ansabiqbal/delta-lake-introduction-with-examples-using-pyspark-cb2a0d7a549d
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://learn.microsoft.com/en-us/azure/databricks/delta/tutorial
+Formatos de tabelas para Lakehouse: Ice Berg e Delta Table,https://dezimaldata.medium.com/5-ways-to-create-a-spark-delta-table-in-databricks-c53af3016660
+Governança de dados,https://kb.ufla.br/books/termos-e-definicoes-governanca-de-dados/page/governanca-de-dados
+Governança de dados,https://www.gov.br/governodigital/pt-br/infraestrutura-nacional-de-dados/governancadedados
+Governança de dados,https://www.escolavirtual.gov.br/curso/270
+Governança de dados,https://www.decube.io/post/data-governance-concepts
+Governança de dados,https://www.alura.com.br/artigos/governanca-de-dados?srsltid=AfmBOormjyy-vlm3ptThA6ZHXr9151hkwe9aR9UO6MVhP0jvmml1hIWY
+Governança de dados,https://cloud.google.com/bigquery/docs/data-governance?hl=pt-br
+Governança de dados,https://www.decube.io/post/data-governance-guide-data-lakehouse
+Governança de dados,https://learn.microsoft.com/pt-br/azure/databricks/lakehouse-architecture/data-governance/
+Governança de dados,https://learn.microsoft.com/pt-br/azure/databricks/lakehouse-architecture/data-governance/best-practices
+Governança de dados,https://azure.microsoft.com/en-us/blog/introducing-modern-data-governance-for-the-era-of-ai/
+Governança de dados,https://medium.com/@axel.schwanke/data-and-ai-governance-31fa25ebc31f
+Governança de dados,https://www.dremio.com/wiki/data-catalog/
+Governança de dados,https://www.databricks.com/sites/default/files/2024-08/comprehensive-guide-to-data-and-ai-governance.pdf
+Governança de dados,https://www.dremio.com/wiki/data-lake-governance/
+Governança de dados,https://atlan.com/data-lake-data-governance/
+Governança de dados,https://www.verticalrelevance.com/use-case-lakehouse-and-data-governance/
+Governança de dados,https://stevenastorino.com/2024/04/23/lakehouse-governance/
+Governança de dados,https://www.ibm.com/think/topics/generative-ai-for-data-management
+Governança de dados,https://aws.amazon.com/pt/blogs/big-data/unstructured-data-management-and-governance-using-aws-ai-ml-and-analytics-services/
+Governança de dados,https://www.cio.com/article/3551587/the-success-of-genai-models-lies-in-your-data-management-strategy.html
+Governança de dados,https://andvijaysays.com/2023/10/17/genai-will-need-a-whole-new-look-at-data-governance/
+Governança de dados,https://www.cio.com/article/3621204/the-future-of-data-a-5-pillar-approach-to-modern-data-management.html
+Governança de dados,https://cloud.google.com/learn/what-is-data-governance?hl=pt-BR
+Governança de dados,https://www.ibm.com/br-pt/topics/data-governance
+Governança de dados,https://aws.amazon.com/pt/what-is/data-governance/
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://datahubproject.io/docs/features
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://atlan.com/openmetadata-explained/
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://atlan.com/openmetadata-vs-datahub/
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://ajithshetty28.medium.com/know-your-data-using-openmetadata-cddef8ecea25
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://www.restack.io/docs/openmetadata-knowledge-openmetadata-data-model
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://oecd.ai/en/catalogue/tools/openmetadata
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://medium.com/@edilsonathaydejunior/explorando-o-open-metadata-no-projeto-lakehouse-open-source-cf92ef39e70e
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://medium.com/data-reply-it-datatech/antonio-la-macchia-ivana-orefice-michele-pini-michele-lanotte-10542fd5c929
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://www.castordoc.com/data-strategy/openmetadata-vs-datahub
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://blog.open-metadata.org/why-openmetadata-is-the-right-choice-for-you-59e329163cac
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://www.inovex.de/de/blog/data-observability-is-key-a-hands-on-comparison-of-open-source-data-catalog-tools/
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://www.altexsoft.com/blog/data-hub/
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://github.com/datahub-project/datahub
+Plataformas de metadados para Governança de dados: Datahub e Openmetadata,https://github.com/open-metadata/OpenMetadata
+Data Fabric,https://www.ibm.com/blogs/digital-transformation/br-pt/o-que-e-data-fabric/
+Data Fabric,https://www.sap.com/resources/what-is-data-fabric#data-fabric-definition
+Data Fabric,https://www.techtarget.com/searchdatamanagement/definition/data-fabric
+Data Fabric,https://nexla.com/data-fabric-architecture
+Data Fabric,https://atlan.com/how-to-implement-data-fabric/
+Data Fabric,https://atlan.com/data-fabric-use-cases/
+Data Fabric,https://atlan.com/what-is-data-fabric/?ref=/data-fabric-use-cases/
+Data Fabric,https://atlan.com/data-fabric-architecture/
+Data Fabric,https://www.k2view.com/what-is-data-fabric/
+Data Fabric,https://www.kyndryl.com/br/pt/learn/data-fabric
+Data Fabric,https://www.ibm.com/data-fabric
+Data Fabric,https://www.sciencedirect.com/science/article/pii/S1566253523003202
+Data Fabric,https://www.starburst.io/data-glossary/data-fabric/
+Data Fabric,https://www.montecarlodata.com/blog-data-fabric-the-future-of-data-architecture/
+Data Fabric,https://bluexp.netapp.com/hubfs/Data-Fabric/Data%20Fabric%20WP%20April%202017.pdf
+Data Fabric,https://www.splunk.com/en_us/blog/learn/data-fabric.html
+Data Fabric,https://www.confluent.io/learn/data-fabric/
+Data Fabric,https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RW1bIPE
+Data Fabric,https://www.castordoc.com/data-strategy/data-fabric-architecture-explained-framework-tools-example
+Data Vault,https://medium.com/murilo-cremon/introdu%C3%A7%C3%A3o-%C3%A0-data-vault-7f410e3b4eff
+Data Vault,https://sci-hub.se/https://doi.org/10.1016/B978-0-12-816916-2.00018-8
+Data Vault,https://sci-hub.se/https://doi.org/10.1016/B978-0-12-816916-2.00019-X
+Data Vault,https://atlan.com/data-vault-architecture/
+Data Vault,https://medium.com/@nuhad.shaabani/practical-introduction-to-data-vault-modeling-1c7fdf5b9014
+Data Vault,https://triggo.ai/blog/entenda-o-que-e-data-vault/
+Data Vault,https://www.passionned.com/the-pros-and-cons-of-a-data-vault/
+Data Vault,https://www.astera.com/type/blog/data-vault-vs-data-mesh/
+Data Vault,https://www.astera.com/type/blog/data-vault/
+Data Vault,https://www.ipvs.uni-stuttgart.de/departments/as/publications/giebleca/19_dataVault_ER.pdf
+Data Vault,https://www.qlik.com/us/data-warehouse/data-vault
+Data Vault,https://pdfcoffee.com/qdownload/data-vault-modeling-guide-pdf-free.html
+Data Vault,https://www.agiledataengine.com/data-vault
+Data Vault,https://www.agiledataengine.com/blog/unlocking-data-vault-best-practices-for-success
+Data Vault,https://www.agiledataengine.com/blog/best-practice-for-addressing-data-vault-challenges-in-databricks
+Data Vault,https://docs.agiledataengine.com/docs/data-vault
+Data Vault,https://www.agiledataengine.com/blog/data-modeling-for-data-protection
+Data Vault,https://www.linkedin.com/pulse/introduction-data-vault-modeling-alex-merced-rg6oe/
+Data Vault,https://en.wikipedia.org/wiki/Data_vault_modeling
+Data Vault,https://www.altexsoft.com/blog/data-vault-architecture/
+Data Vault,https://www.linkedin.com/pulse/data-vault-still-relevant-find-out-why-wherescape/
+Data Vault,https://www.linkedin.com/advice/1/what-differences-similarities-between-dimensional?lang=en
+Data Vault,https://www.astera.com/type/blog/do-you-really-need-a-data-vault/
+Data Vault,https://www.matillion.com/blog/star-schema-vs-data-vault
+Data Vault,https://www.databricks.com/glossary/data-vault
+Data Vault,https://www.phdata.io/blog/building-modern-data-platform-with-data-vault/
+Data Vault,https://techcommunity.microsoft.com/blog/analyticsonazure/data-vault-2-0-modelling-in-synapse-data-warehouse-on-microsoft-fabric/4003349
+Data Vault,https://www.wherescape.com/blog/mastering-data-vault-modeling-architecture-best-practices-and-essential-tools/
+Data Vault,https://www.deloitte.com/nl/en/Industries/financial-services/perspectives/the-power-of-data-vault-modeling-enabling-an-agile-data-warehouse.html
+Data Vault,https://www.linkedin.com/pulse/understanding-data-vault-model-abc-advanced-strategies-k-qpfxc/
