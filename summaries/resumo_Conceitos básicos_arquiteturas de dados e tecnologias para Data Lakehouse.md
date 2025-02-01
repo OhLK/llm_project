@@ -1,284 +1,266 @@
 Resumo gerado para a categoria: Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse
 
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, com mais de 800 palavras, seguido por um tutorial prático sobre como aplicar os conceitos do texto usando a biblioteca Pandas em Python:
+Claro, aqui está o resumo do texto em formato Markdown:
 
-# Resumo do Texto: Arquitetura Lakehouse
+# Resumo do Artigo: "A arquitetura Lakehouse surgiu para que você possa reduzir os custos, esforços e o tempo para gerenciar os dados da sua organização"
 
 ## Introdução
 
-O texto discute a evolução das arquiteturas de gerenciamento de dados, com foco na emergente arquitetura **Lakehouse**. Essa arquitetura busca combinar os pontos fortes dos **Data Warehouses** e dos **Data Lakes**, oferecendo uma solução mais flexível, escalável e econômica para as necessidades atuais de análise de dados. O resumo abordará os principais conceitos, teorias, argumentos, termos técnicos e implicações práticas apresentadas no texto.
+O artigo discute a arquitetura de dados Lakehouse, uma abordagem moderna para armazenar e analisar grandes volumes de dados. Essa arquitetura combina os benefícios dos data lakes e data warehouses, oferecendo uma solução flexível, escalável e econômica para as necessidades de dados das organizações.
 
-## Data Warehouses (DW)
+## Data Warehouse vs. Data Lake
 
-### Definição e Características
+Tradicionalmente, as empresas têm usado data warehouses para armazenar dados estruturados e data lakes para armazenar dados não estruturados e semiestruturados. No entanto, essa abordagem pode resultar em silos de dados e pipelines de ETL complexos.
 
-Um **Data Warehouse** é um repositório central de informações, projetado para consultas e análises avançadas, geralmente contendo grandes quantidades de dados históricos. Os DWs são otimizados para dados estruturados e suportam a tomada de decisões por meio de ferramentas de Business Intelligence (BI).
+*   **Data Warehouse:**
+    *   Armazenamento centralizado para informações que podem ser exploradas para tomar decisões mais adequadas.
+    *   Destinam-se a realizar consultas e análises avançadas.
+    *   Geralmente contêm grandes quantidades de dados históricos.
+    *   Ajudam os líderes de negócio a realizarem análises sobre os dados estruturados (bancos de dados).
+    *   Dão suporte a tomadas de decisão através de ferramentas de inteligência de negócio (BI).
+    *   **Desafios:**
+        *   Acoplam processamento e armazenamento em um servidor, tornando as soluções muito caras.
+        *   Atendem apenas as necessidades de soluções com dados estruturados, limitando seu uso em cenários com dados não estruturados.
+        *   Limita a flexibilidade de uso dos dados para aprendizado de máquina.
 
-### Componentes de um DW Moderno
+*   **Data Lake:**
+    *   Permite armazenar todos os tipos de dados, incluindo dados estruturados, semiestruturados e não estruturados.
+    *   Os dados são transformados apenas quando são necessários para análises, por meio da aplicação de esquemas.
+    *   Processo denominado de “esquema na leitura”.
+    *   **Desafios:**
+        *   Dificuldade de desenvolvimento de soluções, gerenciamento do ambiente e produtização.
+        *   Dificuldade em garantir a qualidade, segurança e governança dos dados no data lake.
+        *   Criação de silos de dados que não eram facilmente compartilhados para os usuários de negócio.
 
-*   **Fontes de Dados:** Sistemas operacionais, como ERP e CRM.
-*   **Processo de ETL (Extração, Transformação e Carregamento):** Extrai dados das fontes, transforma-os para um formato consistente e carrega-os no DW.
-*   **Armazenamento:** Banco de dados relacional otimizado para consultas analíticas.
-*   **Ferramentas de BI:** Permitem aos usuários visualizar e analisar os dados.
+## Arquitetura Lakehouse
 
-### Desafios dos DWs
+A arquitetura Lakehouse visa resolver esses desafios combinando os pontos fortes dos data lakes e data warehouses. Ela oferece:
 
-*   **Custo:** O acoplamento de processamento e armazenamento torna as soluções caras, pois as empresas precisam pagar pelo pico de carga.
-*   **Dados Não Estruturados:** Os DWs são limitados a dados estruturados, dificultando a análise de dados não estruturados (imagens, vídeos, áudios, textos), que crescem rapidamente.
-*   **Aprendizado de Máquina:** A arquitetura limita a flexibilidade para uso de dados em algoritmos de aprendizado de máquina, como visão computacional.
+*   **Armazenamento de baixo custo:** Utiliza armazenamento de objetos em nuvem, como o Amazon S3, para armazenar grandes volumes de dados a um custo reduzido.
+*   **Flexibilidade:** Suporta dados estruturados, semiestruturados e não estruturados.
+*   **Escalabilidade:** Pode ser facilmente escalado para atender às crescentes necessidades de dados.
+*   **Desempenho:** Oferece alto desempenho para consultas e análises de dados.
+*   **Governança de dados:** Fornece recursos para governança de dados, como controle de acesso, auditoria e linhagem de dados.
+*   **Transações ACID:** Garante a consistência e a confiabilidade dos dados.
+*   **Suporte a BI e Machine Learning:** Permite que as organizações usem ferramentas de BI e Machine Learning em seus dados.
 
-## Data Lakes (DL)
+### Principais Conceitos
 
-### Definição e Características
+*   **Separação de processamento e armazenamento:** Permite que diferentes aplicações processem os mesmos dados sem duplicação.
+*   **Formatos de arquivo abertos:** Utiliza formatos como Parquet e ORC, que são estruturados e possuem esquema de dados pré-definido.
+*   **Camada de metadados transacional:** Implementada sobre o sistema de armazenamento para definir quais objetos fazem parte de uma versão da tabela, fornecendo as funcionalidades dos DWs sobre os arquivos de formato aberto.
+*   **Otimizações:** Implementa otimizações para melhorar o desempenho das consultas, como cache, estruturas de dados auxiliares (índices e estatísticas) e otimizações no layout do dado.
 
-Um **Data Lake** é um repositório centralizado que permite armazenar todos os tipos de dados (estruturados, semiestruturados e não estruturados) em seu formato bruto. Os dados são transformados apenas quando necessário para análise, usando o conceito de "esquema na leitura".
+### Implementações Open Source
 
-### Vantagens dos DLs
+*   **Delta Lake:** Camada de armazenamento que traz transações ACID para o Apache Spark e workloads de Big Data.
+*   **Apache Iceberg:** Formato de tabela que permite múltiplas aplicações trabalharem no mesmo conjunto de dados de forma transacional.
+*   **Apache Hudi:** Solução focada em processamento de streaming de dados em uma camada de banco de dados auto-gerenciada.
+*   **Apache Hive ACID:** Implementa transações utilizando o Hive Metastore para rastrear o estado de cada tabela.
 
-*   **Custo:** Armazenamento de baixo custo para grandes volumes de dados.
-*   **Flexibilidade:** Suporta diversos tipos de dados e formatos.
-*   **Escalabilidade:** Pode lidar com o crescimento exponencial dos dados.
+### Arquitetura Lakehouse na AWS
 
-### Desafios dos DLs
+O artigo apresenta uma arquitetura de referência para a implementação de um Lakehouse na AWS, dividida em camadas:
 
-*   **Complexidade:** Dificuldade no desenvolvimento de soluções, gerenciamento do ambiente e produção.
-*   **Qualidade e Governança:** Desafios para garantir a qualidade, segurança e governança dos dados.
-*   **Democratização dos Dados:** A criação de silos de dados dificulta o compartilhamento de informações com os usuários de negócio.
+*   **Ingestão:** AWS DMS, Amazon AppFlow, AWS DataSync, Amazon Kinesis Data Firehose.
+*   **Armazenamento:** Amazon S3 (Data Lake), Amazon Redshift (Data Warehouse).
+*   **Catálogo:** AWS Lake Formation, AWS Glue Crawlers.
+*   **Processamento:** Amazon Redshift Spectrum, AWS Glue, Amazon EMR, Amazon Kinesis Data Analytics.
+*   **Consumo:** Amazon Redshift, Amazon Athena, Amazon SageMaker, Amazon QuickSight.
 
-## Arquitetura Híbrida: Coexistência de DW e DL
+## Arquitetura Medalhão (Medallion)
 
-Para mitigar os problemas de cada abordagem, muitas empresas adotaram uma arquitetura híbrida, onde DWs e DLs coexistem de forma complementar.
+A arquitetura medalhão é um padrão de design de dados usado para organizar logicamente os dados no Lakehouse, visando melhorar incrementalmente a estrutura e a qualidade dos dados à medida que eles fluem através de três camadas:
 
-### Funcionamento
+*   **Bronze:** Armazena dados brutos de sistemas de origem externa.
+*   **Prata:** Combina, adapta e limpa os dados da camada Bronze para fornecer uma visão corporativa de todas as principais entidades de negócios.
+*   **Ouro:** Dados organizados em bancos de dados consumíveis, otimizados para relatórios e análises.
 
-*   **Dados Estruturados:** Armazenados em formato bruto no DL, processados e armazenados em formato tabular nos DWs. Usados principalmente para análises e BI.
-*   **Dados Semiestruturados e Não Estruturados:** Armazenados no DL e usados principalmente para Data Science e Machine Learning.
+## Benefícios do Lakehouse
 
-### Problemas da Arquitetura Híbrida
-
-*   **Duplicação de Dados:** A movimentação de dados entre DL e DW gera duplicação.
-*   **Atraso na Disponibilidade dos Dados:** O processo de ETL pode levar tempo, atrasando a disponibilidade dos dados para análise.
-*   **Governança Complexa:** Gerenciar a governança de dados em dois ambientes distintos é complexo e oneroso.
-
-## Arquitetura Lakehouse: Uma Nova Abordagem
-
-A arquitetura **Lakehouse** surge para resolver os desafios enfrentados por DWs e DLs, combinando seus benefícios em uma única plataforma.
-
-### Princípios Fundamentais
-
-*   **Armazenamento de Baixo Custo:** Utiliza armazenamento de baixo custo do DL, com formatos de arquivo abertos como Parquet e ORC.
-*   **Separação de Processamento e Armazenamento:** Permite que vários motores de processamento acessem os mesmos dados sem duplicação.
-*   **Camada de Metadados Transacional:** Implementada sobre o armazenamento para fornecer funcionalidades de DW, como transações ACID, gerenciamento, versionamento, auditoria, indexação, cache e otimização de consultas.
-*   **Suporte a Diversos Casos de Uso:** Permite análises de dados, BI, Data Science e Machine Learning em uma única plataforma.
-
-### Benefícios do Lakehouse
-
-*   **Redução de Custos:** Menor custo de armazenamento e eliminação da duplicação de dados.
-*   **Simplificação da Arquitetura:** Uma única plataforma para gerenciar todos os tipos de dados.
-*   **Melhor Governança:** Governança de dados centralizada e simplificada.
-*   **Democratização dos Dados:** Acesso mais fácil aos dados para todos os usuários.
-*   **Agilidade:** Maior rapidez na disponibilização de dados para análise.
-
-### Funcionalidades da Camada de Metadados Transacional
-
-*   **Transações ACID:** Garantem a atomicidade, consistência, isolamento e durabilidade das operações de dados.
-*   **Gerenciamento de Metadados:** Permite o rastreamento de versões de tabelas e objetos.
-*   **Versionamento de Dados:** Possibilita o acesso a versões anteriores dos dados (Time Travel).
-*   **Auditoria:** Registra o histórico de operações realizadas nos dados.
-*   **Indexação:** Cria índices para acelerar as consultas.
-*   **Cache:** Armazena dados frequentemente acessados em cache para melhorar o desempenho.
-*   **Otimização de Consultas:** Aplica técnicas para otimizar a execução de consultas.
-
-### Separação de Processamento e Armazenamento: Exemplos Práticos
-
-*   **Cluster Hadoop sob Demanda:** É possível subir um cluster Hadoop na nuvem, executar jobs Spark sobre os dados do Lakehouse e depois derrubar o cluster, pagando apenas pelo processamento utilizado.
-*   **Compartilhamento de Recursos:** Diferentes aplicações podem rodar sob demanda em clusters separados (ex: cluster de GPU para Machine Learning), acessando os mesmos dados.
-
-## Implementações Open-Source de Lakehouse
-
-*   **Delta Lake (Databricks):** Camada de armazenamento que traz transações ACID para o Apache Spark e workloads de Big Data.
-*   **Apache Iceberg:** Formato de tabela que permite que múltiplas aplicações trabalhem no mesmo conjunto de dados de forma transacional.
-*   **Apache Hudi:** Solução focada em processamento de streaming de dados.
-*   **Apache Hive ACID:** Implementa transações utilizando o Hive Metastore.
-
-## Comparação das Implementações Open-Source
-
-*   **Delta Lake:** Melhor integração com o ecossistema Spark, solução mais madura, mas com otimizações importantes disponíveis apenas na versão enterprise.
-*   **Apache Iceberg:** Totalmente open-source, com várias otimizações importantes, comunidade forte, mas com suporte a menos features na API Python.
-*   **Apache Hudi:** Mais robusto para pipelines de streaming de dados.
-*   **Hive ACID:** Boa opção para ambientes on-premise com a plataforma CDP da Cloudera.
-
-## Arquitetura Lakehouse na AWS
-
-A AWS oferece uma arquitetura Lakehouse madura, composta por diversos serviços:
-
-*   **Camada de Ingestão:** AWS DMS, Amazon AppFlow, AWS DataSync, Amazon Kinesis Data Firehose.
-*   **Camada de Armazenamento:** Amazon S3 (Data Lake) e Amazon Redshift (Data Warehouse).
-*   **Camada de Catálogo:** AWS Lake Formation (metadados e governança).
-*   **Camada de Processamento:** Amazon EMR (Spark, Hadoop), AWS Glue (ETL), Amazon Redshift (SQL), Amazon Athena (SQL).
-*   **Camada de Consumo:** Amazon QuickSight (BI), Amazon SageMaker (Machine Learning).
-
-## Arquitetura Medallion
-
-A arquitetura Medallion é um padrão de design de dados usado para organizar logicamente os dados no Lakehouse. Ela visa melhorar incrementalmente a estrutura e a qualidade dos dados à medida que eles fluem pelas três camadas da arquitetura:
-
-*   **Bronze:** Dados brutos, ingeridos diretamente das fontes de dados.
-*   **Prata:** Dados limpos, transformados e enriquecidos, fornecendo uma visão corporativa.
-*   **Ouro:** Dados altamente refinados e agregados, prontos para consumo por ferramentas de BI e análise.
+*   **Redução de custos:** Armazenamento de baixo custo e eliminação da necessidade de manter um data warehouse e um data lake separados.
+*   **Simplificação:** Simplifica o processo de transformação e a arquitetura de dados.
+*   **Governança aprimorada:** Facilita a implementação de controles de governança e segurança.
+*   **Democratização dos dados:** Permite que todos os usuários possam explorar os dados, independentemente de suas capacidades técnicas.
+*   **Aceleração da inovação:** Permite que as equipes de dados se movam mais rapidamente e usem os dados sem precisar acessar vários sistemas.
 
 ## Conclusão
 
-A arquitetura Lakehouse representa uma evolução significativa no gerenciamento de dados, oferecendo uma solução unificada, escalável e econômica para lidar com a crescente complexidade e volume de dados. Ao combinar os benefícios dos Data Warehouses e Data Lakes, o Lakehouse permite que as organizações democratizem o acesso aos dados, acelerem a inovação e obtenham insights valiosos para impulsionar a tomada de decisões. As implementações open-source e as soluções em nuvem, como a oferecida pela AWS, tornam o Lakehouse acessível para empresas de todos os tamanhos.
+A arquitetura Lakehouse é uma abordagem promissora para o gerenciamento de dados, oferecendo uma solução flexível, escalável e econômica. Ela permite que as organizações aproveitem o poder de seus dados para obter insights valiosos e impulsionar a inovação.
 
 ---
 
-# Tutorial Prático: Aplicando Conceitos de Lakehouse com Pandas
+# Tutorial Prático: Construindo um Lakehouse com Delta Lake
 
-Este tutorial demonstrará como aplicar os conceitos de Lakehouse, como a ingestão de dados em diferentes camadas (Bronze, Prata e Ouro), usando a biblioteca Pandas em Python. Vamos simular um cenário simplificado, ideal para estudantes universitários de ciência da computação do primeiro ano.
+Este tutorial demonstra como construir um Lakehouse simples usando o Delta Lake, uma camada de armazenamento open-source que traz confiabilidade para data lakes. O tutorial é voltado para estudantes universitários de ciência da computação do primeiro ano e inclui exemplos de código funcionais e explicações detalhadas.
 
 ## Pré-requisitos
 
-*   Python 3.x instalado
-*   Biblioteca Pandas instalada (`pip install pandas`)
-*   Conhecimento básico de Python e Pandas
+*   Conhecimento básico de Python e Spark.
+*   Ambiente de desenvolvimento configurado com Spark e Delta Lake (por exemplo, usando Databricks Community Edition ou um ambiente local).
 
-## Cenário
+## Passos
 
-Vamos trabalhar com dados de vendas de uma loja fictícia. Os dados brutos serão simulados e armazenados em arquivos CSV.
+### 1. Criando uma Tabela Delta
 
-## Etapa 1: Configuração do Ambiente
-
-Crie uma pasta chamada `lakehouse_tutorial` e, dentro dela, crie três subpastas: `bronze`, `silver` e `gold`. Essas pastas representarão as camadas da arquitetura Medallion.
-
-## Etapa 2: Geração de Dados Brutos (Camada Bronze)
-
-Vamos criar um script Python para gerar dados de vendas fictícios e salvá-los em um arquivo CSV na pasta `bronze`.
+Vamos começar criando uma tabela Delta simples para armazenar informações de clientes.
 
 ```python
-import pandas as pd
-import random
-import datetime
+from delta.tables import *
+from pyspark.sql.functions import *
+from pyspark.sql.types import *
 
-def generate_sales_data(num_records):
-    data = []
-    for _ in range(num_records):
-        product_id = random.randint(1, 10)
-        quantity = random.randint(1, 50)
-        price = round(random.uniform(10.0, 500.0), 2)
-        sale_date = datetime.date(2023, random.randint(1, 12), random.randint(1, 28))
-        data.append([product_id, quantity, price, sale_date])
-    return data
+# Definindo o esquema da tabela
+schema = StructType([
+    StructField("id", IntegerType(), True),
+    StructField("nome", StringType(), True),
+    StructField("cidade", StringType(), True)
+])
 
-# Gerar 100 registros de vendas
-sales_data = generate_sales_data(100)
+# Criando um DataFrame vazio com o esquema definido
+df = spark.createDataFrame([], schema)
 
-# Criar DataFrame Pandas
-df = pd.DataFrame(sales_data, columns=['product_id', 'quantity', 'price', 'sale_date'])
+# Escrevendo o DataFrame como uma tabela Delta
+df.write.format("delta").mode("overwrite").save("/caminho/para/tabela/clientes")
 
-# Salvar dados brutos na camada Bronze
-df.to_csv('lakehouse_tutorial/bronze/sales_raw.csv', index=False)
-
-print("Dados brutos gerados e salvos em lakehouse_tutorial/bronze/sales_raw.csv")
+print("Tabela Delta 'clientes' criada com sucesso!")
 ```
 
 **Explicação:**
 
-1. **`generate_sales_data(num_records)`:** Função que gera dados de vendas aleatórios.
-2. **`pd.DataFrame(...)`:** Cria um DataFrame Pandas a partir dos dados gerados.
-3. **`df.to_csv(...)`:** Salva o DataFrame como um arquivo CSV na pasta `bronze`.
+1. Importamos as bibliotecas necessárias do Delta Lake e do Spark.
+2. Definimos o esquema da tabela `clientes` com as colunas `id`, `nome` e `cidade`.
+3. Criamos um DataFrame vazio com o esquema definido.
+4. Usamos `write.format("delta")` para especificar que queremos escrever os dados no formato Delta.
+5. `mode("overwrite")` indica que queremos sobrescrever a tabela se ela já existir.
+6. `save("/caminho/para/tabela/clientes")` salva a tabela no local especificado.
 
-## Etapa 3: Limpeza e Transformação (Camada Prata)
+### 2. Inserindo Dados
 
-Agora, vamos ler os dados brutos da camada Bronze, realizar algumas transformações simples e salvar os dados limpos na camada Prata.
+Agora, vamos inserir alguns dados na tabela Delta.
 
 ```python
-import pandas as pd
+# Criando um DataFrame com dados de exemplo
+data = [(1, "João Silva", "São Paulo"),
+        (2, "Maria Santos", "Rio de Janeiro"),
+        (3, "Pedro Almeida", "Belo Horizonte")]
 
-# Ler dados brutos da camada Bronze
-df_bronze = pd.read_csv('lakehouse_tutorial/bronze/sales_raw.csv')
+df_clientes = spark.createDataFrame(data, schema)
 
-# Converter 'sale_date' para datetime
-df_bronze['sale_date'] = pd.to_datetime(df_bronze['sale_date'])
+# Inserindo os dados na tabela Delta
+df_clientes.write.format("delta").mode("append").save("/caminho/para/tabela/clientes")
 
-# Calcular o total da venda
-df_bronze['total_sale'] = df_bronze['quantity'] * df_bronze['price']
-
-# Remover registros com quantidade negativa (simulando erro nos dados)
-df_silver = df_bronze[df_bronze['quantity'] > 0].copy()
-
-# Padronizar nomes de colunas (minúsculas e com underscore)
-df_silver.columns = ['product_id', 'quantity', 'price', 'sale_date', 'total_sale']
-
-# Salvar dados limpos na camada Prata
-df_silver.to_csv('lakehouse_tutorial/silver/sales_cleaned.csv', index=False)
-
-print("Dados limpos e transformados salvos em lakehouse_tutorial/silver/sales_cleaned.csv")
+print("Dados inseridos na tabela Delta 'clientes' com sucesso!")
 ```
 
 **Explicação:**
 
-1. **`pd.read_csv(...)`:** Lê o arquivo CSV da camada Bronze.
-2. **`pd.to_datetime(...)`:** Converte a coluna `sale_date` para o tipo datetime.
-3. **`df_bronze['total_sale'] = ...`:** Calcula o valor total da venda.
-4. **`df_silver = df_bronze[...].copy()`:** Filtra registros com quantidade maior que zero e cria uma cópia para evitar modificar o DataFrame original.
-5. **`df_silver.columns = [...]`:** Renomeia as colunas para um formato padronizado.
-6. **`df_silver.to_csv(...)`:** Salva o DataFrame limpo como um arquivo CSV na pasta `silver`.
+1. Criamos um DataFrame `df_clientes` com dados de exemplo.
+2. Usamos `mode("append")` para adicionar os dados à tabela sem sobrescrevê-la.
 
-## Etapa 4: Agregação e Preparação para Análise (Camada Ouro)
+### 3. Consultando Dados
 
-Nesta etapa, vamos ler os dados da camada Prata, realizar uma agregação e salvar os dados prontos para análise na camada Ouro.
+Vamos consultar os dados da tabela Delta.
 
 ```python
-import pandas as pd
+# Lendo a tabela Delta
+df_clientes_read = spark.read.format("delta").load("/caminho/para/tabela/clientes")
 
-# Ler dados da camada Prata
-df_silver = pd.read_csv('lakehouse_tutorial/silver/sales_cleaned.csv')
-
-# Agrupar por 'product_id' e calcular a soma de 'total_sale'
-df_gold = df_silver.groupby('product_id')['total_sale'].sum().reset_index()
-
-# Renomear coluna
-df_gold = df_gold.rename(columns={'total_sale': 'total_sales_by_product'})
-
-# Salvar dados agregados na camada Ouro
-df_gold.to_csv('lakehouse_tutorial/gold/sales_aggregated.csv', index=False)
-
-print("Dados agregados salvos em lakehouse_tutorial/gold/sales_aggregated.csv")
+# Exibindo os dados
+df_clientes_read.show()
 ```
 
 **Explicação:**
 
-1. **`pd.read_csv(...)`:** Lê o arquivo CSV da camada Prata.
-2. **`df_silver.groupby(...)[...].sum().reset_index()`:** Agrupa os dados por `product_id` e calcula a soma de `total_sale` para cada produto. `reset_index()` transforma o resultado do agrupamento em um DataFrame.
-3. **`df_gold = df_gold.rename(...)`:** Renomeia a coluna `total_sale` para `total_sales_by_product`.
-4. **`df_gold.to_csv(...)`:** Salva o DataFrame agregado como um arquivo CSV na pasta `gold`.
+1. Usamos `read.format("delta")` para ler os dados no formato Delta.
+2. `load("/caminho/para/tabela/clientes")` carrega a tabela do local especificado.
+3. `show()` exibe os dados da tabela.
 
-## Etapa 5: Análise dos Dados (Camada Ouro)
+### 4. Atualizando Dados
 
-Agora, podemos ler os dados da camada Ouro e realizar análises simples.
+O Delta Lake suporta operações de atualização. Vamos atualizar a cidade do cliente com `id` 2.
 
 ```python
-import pandas as pd
+# Atualizando a cidade do cliente com id 2
+df_clientes_read.filter(col("id") == 2).withColumn("cidade", lit("Brasília")).write.format("delta").mode("overwrite").option("overwriteSchema", "true").save("/caminho/para/tabela/clientes")
 
-# Ler dados da camada Ouro
-df_gold = pd.read_csv('lakehouse_tutorial/gold/sales_aggregated.csv')
+# Lendo a tabela Delta atualizada
+df_clientes_updated = spark.read.format("delta").load("/caminho/para/tabela/clientes")
 
-# Exibir os dados
-print(df_gold)
-
-# Encontrar o produto com maior total de vendas
-top_product = df_gold.loc[df_gold['total_sales_by_product'].idxmax()]
-print(f"\nProduto com maior total de vendas:\n{top_product}")
+# Exibindo os dados atualizados
+df_clientes_updated.show()
 ```
 
 **Explicação:**
 
-1. **`pd.read_csv(...)`:** Lê o arquivo CSV da camada Ouro.
-2. **`print(df_gold)`:** Exibe o DataFrame com os dados agregados.
-3. **`df_gold.loc[df_gold['total_sales_by_product'].idxmax()]`:** Encontra a linha com o maior valor na coluna `total_sales_by_product` e a exibe.
+1. Filtramos o DataFrame para selecionar o cliente com `id` 2.
+2. Usamos `withColumn()` para atualizar a coluna `cidade` para "Brasília".
+3. Usamos `mode("overwrite")` e `option("overwriteSchema", "true")` para sobrescrever a tabela com os dados atualizados e permitir a alteração do esquema.
 
-## Conclusão do Tutorial
+### 5. Excluindo Dados
 
-Este tutorial demonstrou como aplicar os conceitos básicos de uma arquitetura Lakehouse usando a biblioteca Pandas em Python. Simulamos a ingestão de dados brutos (Bronze), a limpeza e transformação (Prata) e a agregação para análise (Ouro). Embora este seja um exemplo simplificado, ele ilustra os princípios fundamentais da organização de dados em camadas e a preparação para análise, conceitos essenciais para estudantes de ciência da computação que estão começando a explorar o mundo do gerenciamento e análise de dados.
+O Delta Lake também suporta operações de exclusão. Vamos excluir o cliente com `id` 1.
 
-Este exemplo pode ser expandido para incluir mais transformações, tipos de dados e análises mais complexas, mas fornece uma base sólida para a compreensão prática da arquitetura Lakehouse.
+```python
+# Excluindo o cliente com id 1
+df_clientes_updated.filter(col("id") != 1).write.format("delta").mode("overwrite").option("overwriteSchema", "true").save("/caminho/para/tabela/clientes")
+
+# Lendo a tabela Delta após a exclusão
+df_clientes_deleted = spark.read.format("delta").load("/caminho/para/tabela/clientes")
+
+# Exibindo os dados após a exclusão
+df_clientes_deleted.show()
+```
+
+**Explicação:**
+
+1. Filtramos o DataFrame para selecionar os clientes com `id` diferente de 1.
+2. Sobrescrevemos a tabela com os dados filtrados, efetivamente excluindo o cliente com `id` 1.
+
+### 6. Time Travel (Viagem no Tempo)
+
+O Delta Lake permite consultar versões anteriores da tabela. Vamos consultar a tabela antes da atualização e exclusão.
+
+```python
+# Lendo uma versão específica da tabela (versão 0, neste exemplo)
+df_clientes_version_0 = spark.read.format("delta").option("versionAsOf", 0).load("/caminho/para/tabela/clientes")
+
+# Exibindo os dados da versão 0
+df_clientes_version_0.show()
+```
+
+**Explicação:**
+
+1. Usamos `option("versionAsOf", 0)` para especificar a versão da tabela que queremos consultar.
+
+### 7. Compactação de Dados (Vacuum)
+
+O Delta Lake mantém o histórico de versões da tabela. Para otimizar o armazenamento, podemos usar o comando `VACUUM` para remover arquivos antigos que não são mais necessários.
+
+```python
+from delta.tables import *
+
+# Instanciando a tabela Delta
+deltaTable = DeltaTable.forPath(spark, "/caminho/para/tabela/clientes")
+
+# Executando o comando VACUUM
+deltaTable.vacuum()
+```
+
+**Explicação:**
+
+1. Instanciamos a tabela Delta usando `DeltaTable.forPath()`.
+2. `vacuum()` remove os arquivos antigos que não são mais necessários.
+
+## Conclusão
+
+Este tutorial demonstrou como construir um Lakehouse simples usando o Delta Lake. Você aprendeu como criar tabelas Delta, inserir, consultar, atualizar e excluir dados, e usar recursos como Time Travel e Vacuum. O Delta Lake oferece uma base sólida para a construção de Lakehouses confiáveis e escaláveis, permitindo que você gerencie e analise seus dados de forma eficiente.
+
+## Próximos Passos
+
+*   Explore a documentação do Delta Lake para aprender mais sobre seus recursos.
+*   Experimente com diferentes tipos de dados e operações.
+*   Integre o Delta Lake com outras ferramentas do ecossistema Spark, como Spark SQL e Spark Streaming.
+*   Considere a utilização de uma plataforma como o Databricks para simplificar o gerenciamento do seu Lakehouse.
+*   Explore a arquitetura em medalhão para organizar seus dados em camadas (Bronze, Prata e Ouro).
+*   Aprofunde seus conhecimentos sobre os outros componentes de uma arquitetura Lakehouse, como ingestão, catálogo e consumo de dados.

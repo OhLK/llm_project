@@ -1,214 +1,152 @@
 Resumo gerado para a categoria: AWS OpenSearch
 
-Claro, aqui está um resumo acadêmico detalhado e informativo do texto fornecido, seguido por um tutorial prático sobre como aplicar os conceitos usando a biblioteca Pandas em Python.
+Claro, aqui está um resumo acadêmico detalhado e informativo do texto que você forneceu, seguido por um tutorial prático:
 
-**Resumo Acadêmico do Amazon OpenSearch Service**
+# Resumo Acadêmico: Introdução ao Amazon OpenSearch Service
 
-**Introdução**
+## Introdução
 
-O Amazon OpenSearch Service é um serviço totalmente gerenciado que facilita a implantação, operação e escalabilidade de clusters OpenSearch na nuvem AWS. O OpenSearch é um mecanismo de pesquisa e análise de código aberto, distribuído e compatível com RESTful, usado para uma ampla gama de casos de uso, como monitoramento de aplicativos em tempo real, análise de logs e análise de fluxo de cliques. Este resumo abordará os principais conceitos, teorias e argumentos apresentados no texto sobre o Amazon OpenSearch Service, juntamente com suas implicações práticas.
+O Amazon OpenSearch Service é um serviço totalmente gerenciado que facilita a implantação, operação e escalonamento de clusters OpenSearch na nuvem AWS. O OpenSearch é um mecanismo de pesquisa e análise de código aberto, distribuído e compatível com a API RESTful, usado para uma ampla gama de casos de uso, como monitoramento de aplicativos em tempo real, análise de logs e pesquisa de sites. O OpenSearch Service simplifica o gerenciamento de clusters OpenSearch, cuidando de tarefas como provisionamento de hardware, instalação e aplicação de patches de software, backups e monitoramento. Ele também se integra a outras ferramentas populares de código aberto, como o OpenSearch Dashboards para visualização de dados e o Logstash para ingestão de dados.
 
-**Principais Conceitos e Teorias**
+## Principais Conceitos e Funcionalidades
 
-*   **Domínios OpenSearch**: Um domínio OpenSearch é um cluster que fornece os recursos de computação e armazenamento necessários para indexar e pesquisar seus dados. O texto destaca a importância de criar um domínio como o primeiro passo para usar o OpenSearch Service.
-*   **Dimensionamento de Domínios**: O dimensionamento adequado de um domínio é crucial para o desempenho e a eficiência de custos. O texto sugere dimensionar o domínio com base na carga de trabalho esperada, o que envolve considerar fatores como a quantidade de dados, a complexidade das consultas e a taxa de ingestão de dados.
-*   **Controle de Acesso**: O OpenSearch Service oferece dois mecanismos principais para controlar o acesso aos seus dados: políticas de acesso ao domínio e controle de acesso refinado. As políticas de acesso ao domínio são baseadas em recursos e especificam quais principais (usuários ou funções) têm permissão para acessar quais recursos em um domínio. O controle de acesso refinado fornece um controle mais granular sobre o acesso, permitindo que você defina permissões no nível de índice, documento e campo.
-*   **Indexação de Dados**: A indexação é o processo de adicionar dados a um domínio OpenSearch para que possam ser pesquisados. O texto menciona que os dados podem ser indexados manualmente ou de outros serviços da AWS. A indexação envolve a estruturação dos dados de uma forma que o OpenSearch possa entender e armazenar com eficiência.
-*   **OpenSearch Dashboards**: O OpenSearch Dashboards é uma ferramenta de visualização de código aberto que permite que você explore e visualize os dados armazenados em um domínio OpenSearch. Ele fornece uma interface amigável para pesquisar dados, criar painéis e gerar relatórios.
-*   **Gerenciamento de Índices**: O gerenciamento de índices envolve tarefas como criação, exclusão e modificação de índices. O texto sugere a leitura sobre o gerenciamento de índices para entender como otimizar o armazenamento e o desempenho da pesquisa.
-*   **Migração para o OpenSearch Service**: Para aqueles que já usam clusters OpenSearch autogerenciados, o texto menciona a possibilidade de migrar para o OpenSearch Service. Isso pode simplificar o gerenciamento e reduzir a sobrecarga operacional.
+### Domínios OpenSearch
 
-**Termos Técnicos e Exemplos**
+Um domínio OpenSearch é um cluster OpenSearch que é exposto como um serviço AWS com seu próprio endpoint. Ele encapsula os recursos de hardware e software necessários para executar o OpenSearch, incluindo instâncias, armazenamento e configurações. Ao criar um domínio, você especifica o número de instâncias, tipos de instância e configurações de armazenamento que deseja usar. Você também pode configurar opções avançadas, como políticas de acesso, configurações de criptografia e opções de snapshot automatizado.
 
-1. **Domínio**: Um domínio OpenSearch é semelhante a um cluster em outros sistemas de banco de dados. É uma coleção de um ou mais nós de dados que trabalham juntos para armazenar e processar dados.
-    *   *Exemplo*: Você pode criar um domínio chamado "logs-de-produção" para armazenar e analisar todos os logs gerados por seus aplicativos de produção.
+### Dimensionamento de Domínios
 
-2. **Índice**: Um índice é uma coleção de documentos que têm características semelhantes. É semelhante a uma tabela em um banco de dados relacional.
-    *   *Exemplo*: Dentro do domínio "logs-de-produção", você pode ter um índice chamado "logs-de-aplicativos-web" para armazenar logs especificamente de seus servidores web.
+O OpenSearch Service permite que você dimensione seus domínios verticalmente (alterando o tipo de instância) ou horizontalmente (alterando o número de instâncias) para atender às mudanças nas necessidades de sua carga de trabalho. O dimensionamento pode ser feito por meio do console do OpenSearch Service, da AWS CLI ou dos SDKs da AWS. É importante dimensionar seu domínio adequadamente para garantir que você tenha recursos suficientes para lidar com sua carga de trabalho sem provisionar em excesso e incorrer em custos desnecessários.
 
-3. **Documento**: Um documento é uma unidade básica de informação que pode ser indexada. É representado como um objeto JSON.
-    *   *Exemplo*: Um único log de um servidor web, contendo campos como timestamp, endereço IP, solicitação HTTP e código de status, seria um documento.
+### Controle de Acesso
 
-4. **Nó**: Um nó é uma única instância de execução do OpenSearch. Um domínio é composto por um ou mais nós.
-    *   *Exemplo*: Seu domínio "logs-de-produção" pode ser composto por três nós para lidar com o volume de dados e consultas.
+O OpenSearch Service oferece várias maneiras de controlar o acesso aos seus domínios. Você pode usar políticas de acesso ao domínio, que são políticas do IAM que especificam quem pode acessar seu domínio e quais ações eles podem executar. Você também pode usar o controle de acesso refinado, que permite definir permissões granulares para usuários e funções, incluindo permissões no nível do índice, no nível do documento e no nível do campo.
 
-5. **Shard**: Um shard é uma partição de um índice. Os índices são divididos em shards para distribuir os dados por vários nós, melhorando o desempenho e a escalabilidade.
-    *   *Exemplo*: O índice "logs-de-aplicativos-web" pode ser dividido em cinco shards, com cada shard armazenado em um nó diferente.
+### Indexação de Dados
 
-6. **Réplica**: Uma réplica é uma cópia de um shard. As réplicas fornecem alta disponibilidade e tolerância a falhas.
-    *   *Exemplo*: Cada shard do índice "logs-de-aplicativos-web" pode ter duas réplicas, garantindo que os dados permaneçam acessíveis mesmo se um nó falhar.
+A indexação é o processo de adicionar dados a um cluster OpenSearch para que possam ser pesquisados. O OpenSearch Service permite que você indexe dados manualmente usando a API OpenSearch ou de outros serviços da AWS, como Amazon Kinesis Data Firehose, Amazon CloudWatch Logs e AWS IoT. Depois que seus dados são indexados, você pode pesquisá-los usando a API de pesquisa do OpenSearch ou o OpenSearch Dashboards.
 
-**Implicações Práticas**
+### OpenSearch Dashboards
 
-*   **Monitoramento e Análise de Logs**: O OpenSearch Service pode ser usado para coletar, indexar e analisar logs de várias fontes, como servidores, aplicativos e dispositivos. Isso permite que as organizações monitorem seus sistemas em tempo real, solucionem problemas e obtenham insights sobre o comportamento do sistema.
-*   **Análise de Segurança**: O OpenSearch Service pode ser usado para analisar logs de segurança e detectar anomalias ou ameaças potenciais. Isso pode ajudar as organizações a melhorar sua postura de segurança e responder a incidentes de segurança mais rapidamente.
-*   **Pesquisa de Aplicativos**: O OpenSearch Service pode ser usado para alimentar a funcionalidade de pesquisa em aplicativos, fornecendo aos usuários resultados de pesquisa rápidos e relevantes.
-*   **Business Intelligence**: O OpenSearch Service pode ser usado para analisar dados de negócios, como dados de vendas, dados de clientes e dados de marketing. Isso pode ajudar as organizações a obter insights sobre suas operações de negócios e tomar decisões baseadas em dados.
+O OpenSearch Dashboards é uma ferramenta de visualização de código aberto que facilita a exploração e a análise de seus dados do OpenSearch. Ele fornece uma variedade de visualizações, como gráficos de barras, gráficos de linhas, gráficos de pizza e mapas, que você pode usar para criar painéis interativos. O OpenSearch Dashboards também inclui um console de desenvolvedor que permite executar consultas diretamente em seu cluster OpenSearch usando a API OpenSearch.
 
-**Conclusão**
+### Gerenciamento de Índices
 
-O Amazon OpenSearch Service é um serviço poderoso e flexível que pode ser usado para uma ampla gama de casos de uso de pesquisa e análise. Ao entender os principais conceitos e teorias discutidos neste resumo, as organizações podem aproveitar efetivamente o OpenSearch Service para obter insights de seus dados, melhorar suas operações e aprimorar sua postura de segurança. O serviço simplifica a implantação e o gerenciamento de clusters OpenSearch, permitindo que as organizações se concentrem na análise de dados em vez do gerenciamento de infraestrutura.
+O OpenSearch Service fornece várias maneiras de gerenciar os índices em seu domínio. Você pode criar, excluir e modificar índices usando a API OpenSearch ou o OpenSearch Dashboards. Você também pode usar o Index State Management (ISM) para automatizar tarefas rotineiras de gerenciamento de índices, como reversões e exclusões de índices.
 
-**Tutorial Prático: Introdução ao Amazon OpenSearch Service com Pandas**
+### Migração para o OpenSearch Service
 
-Este tutorial irá guiá-lo através do processo de uso do Amazon OpenSearch Service para analisar um conjunto de dados usando a biblioteca Pandas em Python. Assumiremos que você já tenha uma conta da AWS e tenha seguido o tutorial de conceitos básicos do Amazon OpenSearch Service.
+O OpenSearch Service oferece um tutorial para migrar de um cluster OpenSearch autogerenciado para o OpenSearch Service. O processo de migração envolve a criação de um novo domínio OpenSearch Service, a reindexação de seus dados no novo domínio e a atualização de seus aplicativos para usar o novo endpoint de domínio.
 
-**Objetivo**: Analisar um conjunto de dados de avaliações de filmes para encontrar a classificação média de cada gênero.
+## Implicações Práticas
 
-**Pré-requisitos**:
+O Amazon OpenSearch Service tem várias implicações práticas para organizações que precisam de uma solução de pesquisa e análise escalonável e confiável. Algumas das principais implicações incluem:
 
-*   Conta da AWS com o Amazon OpenSearch Service configurado.
-*   Python 3 instalado em sua máquina local.
-*   Bibliotecas `pandas`, `opensearch-py` e `requests` instaladas (`pip install pandas opensearch-py requests`).
-*   Um conjunto de dados de exemplo (vamos usar o conjunto de dados MovieLens 100k, disponível aqui: [https://grouplens.org/datasets/movielens/100k/](https://grouplens.org/datasets/movielens/100k/)).
+*   **Gerenciamento Simplificado:** O OpenSearch Service simplifica o gerenciamento de clusters OpenSearch, cuidando de tarefas administrativas como provisionamento de hardware, instalação de software e backups. Isso permite que as organizações se concentrem em seus principais objetivos de negócios em vez de gerenciar a infraestrutura de pesquisa.
+*   **Escalabilidade e Confiabilidade:** O OpenSearch Service é projetado para ser altamente escalável e confiável. Ele pode lidar com grandes quantidades de dados e tráfego de pesquisa e pode ser dimensionado automaticamente para cima ou para baixo para atender às mudanças nas necessidades da carga de trabalho.
+*   **Integração com Serviços AWS:** O OpenSearch Service se integra a outros serviços AWS, como Amazon Kinesis Data Firehose, Amazon CloudWatch Logs e AWS IoT. Isso facilita a ingestão de dados de uma variedade de fontes e o uso do OpenSearch Service para pesquisar e analisar esses dados.
+*   **Visualização com OpenSearch Dashboards:** A integração com o OpenSearch Dashboards fornece uma ferramenta poderosa para visualizar e explorar dados, permitindo que os usuários obtenham insights e tomem decisões baseadas em dados.
+*   **Segurança:** O OpenSearch Service oferece recursos de segurança robustos, incluindo políticas de acesso ao domínio e controle de acesso refinado, garantindo que os dados sejam protegidos e acessíveis apenas a usuários autorizados.
 
-**Etapa 1: Criar um Domínio OpenSearch**
+## Conclusão
 
-1. Faça login no Console de Gerenciamento da AWS e abra o console do Amazon OpenSearch Service.
-2. Escolha "Criar um novo domínio".
-3. Escolha um nome de domínio (por exemplo, "análise-de-filmes").
-4. Selecione uma versão de implantação e uma versão do OpenSearch (escolha a versão mais recente estável).
-5. Escolha um tipo de instância para seus nós de dados (por exemplo, `t3.small.search` para fins de teste).
-6. Defina o número de nós (por exemplo, 1 para fins de teste).
-7. Configure o acesso à rede e a segurança. Para este tutorial, você pode usar uma política de acesso aberta para fins de teste, mas para ambientes de produção, use uma política de acesso segura.
-8. Revise suas configurações e escolha "Criar".
-9. Aguarde até que o status do domínio mude para "Ativo". Isso pode levar vários minutos.
+O Amazon OpenSearch Service é um serviço poderoso que simplifica a implantação, operação e escalonamento de clusters OpenSearch na nuvem AWS. Ele oferece uma variedade de recursos e capacidades, incluindo dimensionamento de domínio, controle de acesso, indexação de dados, gerenciamento de índices e integração com o OpenSearch Dashboards. Ao aproveitar o OpenSearch Service, as organizações podem reduzir a sobrecarga administrativa, melhorar a escalabilidade e a confiabilidade e obter insights valiosos de seus dados. Para estudantes universitários de ciência da computação do primeiro ano, entender esses conceitos fornece uma base sólida para trabalhar com soluções de pesquisa e análise em um ambiente de nuvem.
 
-**Etapa 2: Preparar os Dados**
+***
 
-1. Baixe o conjunto de dados MovieLens 100k e extraia os arquivos.
-2. Vamos usar os arquivos `u.data` (avaliações) e `u.item` (informações do filme).
-3. Abra um novo notebook Jupyter ou um script Python.
-4. Importe as bibliotecas necessárias:
+# Tutorial Prático: Primeiros Passos com o Amazon OpenSearch Service
 
-```python
-import pandas as pd
-from opensearchpy import OpenSearch, RequestsHttpConnection
-from requests_aws4auth import AWS4Auth
-import boto3
-```
+Este tutorial irá guiá-lo através do processo de configuração de um domínio Amazon OpenSearch Service, indexação de alguns dados de amostra e execução de pesquisas básicas usando o OpenSearch Dashboards. Este guia é projetado para estudantes universitários de ciência da computação do primeiro ano e assume familiaridade básica com conceitos de programação e a AWS.
 
-1. Carregue os dados em DataFrames do Pandas:
+## Pré-requisitos
 
-```python
-# Carregar dados de avaliações
-ratings_data = pd.read_csv('u.data', sep='\t', names=['user_id', 'movie_id', 'rating', 'timestamp'])
+*   Uma conta AWS. Se você não tiver uma, inscreva-se em [https://aws.amazon.com](https://aws.amazon.com).
+*   Conhecimento básico de conceitos de programação.
+*   Familiaridade com a AWS Management Console.
 
-# Carregar dados de filmes
-movies_data = pd.read_csv('u.item', sep='|', encoding='latin-1', names=['movie_id', 'movie_title', 'release_date', 'video_release_date',
-                                                                   'IMDb_URL', 'unknown', 'Action', 'Adventure', 'Animation',
-                                                                   'Children\'s', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy',
-                                                                   'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance', 'Sci-Fi',
-                                                                   'Thriller', 'War', 'Western'])
+## Etapa 1: Criar um Domínio OpenSearch
 
-# Mesclar os dois DataFrames
-movie_ratings = pd.merge(movies_data, ratings_data, on='movie_id')
-```
+1. **Faça login na AWS Management Console:** Navegue até a AWS Management Console e faça login usando as credenciais da sua conta AWS.
+2. **Abra o Console do OpenSearch Service:** No console da AWS, pesquise por "OpenSearch" e selecione "Amazon OpenSearch Service" nos resultados.
+3. **Criar um Domínio:**
+    *   Clique no botão "Criar domínio".
+    *   Escolha a opção "Desenvolvimento e teste" para o tipo de implantação.
+    *   Insira um nome para o seu domínio (por exemplo, `my-first-domain`).
+    *   Selecione um tipo de instância (por exemplo, `t3.small.search`).
+    *   Defina o número de instâncias como 1 para este tutorial.
+    *   Clique em "Criar" para criar seu domínio.
 
-**Etapa 3: Conectar-se ao Domínio OpenSearch**
+    A criação do domínio levará alguns minutos.
 
-1. Obtenha o endpoint do seu domínio OpenSearch no console do Amazon OpenSearch Service.
-2. Configure as credenciais da AWS:
+## Etapa 2: Configurar o Controle de Acesso
 
-```python
-region = 'your-aws-region' # por exemplo, us-east-1
-service = 'es'
-credentials = boto3.Session().get_credentials()
-awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
-```
+1. **Navegue até as Configurações do seu Domínio:** Assim que seu domínio for criado, clique no nome do domínio para acessar seus detalhes.
+2. **Modificar a Política de Acesso:**
+    *   Na guia "Segurança", clique em "Editar configuração de segurança".
+    *   Selecione "Criar uma política personalizada"
+    *   Adicione uma política que permita o acesso do seu endereço IP atual. Você pode usar um modelo como "Permitir acesso ao domínio de endereços IP específicos" e inserir seu endereço IP.
+    *   Clique em "Salvar alterações".
 
-1. Crie um cliente OpenSearch:
+## Etapa 3: Indexar Dados de Amostra
 
-```python
-host = 'your-opensearch-domain-endpoint' # por exemplo, search-movies-analysis-xxxxxxx.us-east-1.es.amazonaws.com
+Para este tutorial, usaremos a API OpenSearch para indexar manualmente alguns documentos de amostra.
 
-client = OpenSearch(
-    hosts = [{'host': host, 'port': 443}],
-    http_auth = awsauth,
-    use_ssl = True,
-    verify_certs = True,
-    connection_class = RequestsHttpConnection
-)
-```
+1. **Obter o Endpoint do seu Domínio:**
+    *   Na página de detalhes do seu domínio, encontre o endpoint do domínio. Ele deve se parecer com isto: `https://search-my-first-domain-xxxxxxxxxxxxxxxxxxxxxxxxxx.us-east-1.es.amazonaws.com`.
 
-**Etapa 4: Indexar os Dados no OpenSearch**
+2. **Usar `curl` ou Postman para Indexar Dados:**
+    *   Abra um terminal ou use uma ferramenta como o Postman para enviar solicitações HTTP.
+    *   Execute os seguintes comandos para indexar alguns documentos de amostra (substitua `your-domain-endpoint` pelo endpoint real do seu domínio):
 
-1. Crie um índice no OpenSearch:
+    ```bash
+    # Indexar um documento
+    curl -X POST "your-domain-endpoint/my-index/_doc/" \
+    -H "Content-Type: application/json" \
+    -d '{
+        "title": "Livro 1",
+        "author": "Autor A",
+        "content": "Este é o conteúdo do livro 1."
+    }'
 
-```python
-index_name = 'avaliacoes-de-filmes'
+    # Indexar outro documento
+    curl -X POST "your-domain-endpoint/my-index/_doc/" \
+    -H "Content-Type: application/json" \
+    -d '{
+        "title": "Livro 2",
+        "author": "Autor B",
+        "content": "Este é o conteúdo do livro 2."
+    }'
+    ```
 
-index_body = {
-  'settings': {
-    'index': {
-      'number_of_shards': 1,
-      'number_of_replicas': 0
-    }
-  }
-}
+    Esses comandos criam um índice chamado `my-index` e adicionam dois documentos a ele.
 
-client.indices.create(index_name, body=index_body)
-```
+## Etapa 4: Pesquisar Dados Usando o OpenSearch Dashboards
 
-1. Converta o DataFrame do Pandas em uma lista de dicionários e indexe-os no OpenSearch:
+1. **Abrir o OpenSearch Dashboards:**
+    *   Na página de detalhes do seu domínio, encontre o link do OpenSearch Dashboards. Ele deve se parecer com isto: `https://search-my-first-domain-xxxxxxxxxxxxxxxxxxxxxxxxxx.us-east-1.es.amazonaws.com/_dashboards/`.
+    *   Clique no link para abrir o OpenSearch Dashboards.
 
-```python
-def index_data(dataframe, index_name, client):
-    for index, row in dataframe.iterrows():
-        document = row.to_dict()
-        client.index(
-            index = index_name,
-            body = document,
-            id = index
-        )
-    print(f"Indexed {len(dataframe)} documents into index {index_name}")
+2. **Definir um Padrão de Índice:**
+    *   Na primeira vez que você abrir o OpenSearch Dashboards, será necessário definir um padrão de índice.
+    *   Insira `my-index` como o padrão de índice.
+    *   Clique em "Próxima etapa" e, em seguida, clique em "Criar padrão de índice".
 
-index_data(movie_ratings, index_name, client)
-```
+3. **Explorar seus Dados:**
+    *   Clique na guia "Descobrir" no menu esquerdo.
+    *   Você deve ver os documentos que indexou.
+    *   Na barra de pesquisa, digite uma consulta como `title:Livro` e pressione Enter.
+    *   Você verá os documentos que correspondem à sua consulta.
 
-**Etapa 5: Realizar Análises com Consultas OpenSearch**
+## Etapa 5: Limpeza (Opcional)
 
-1. Vamos encontrar a classificação média para cada gênero. Primeiro, precisamos de uma consulta que agregue as classificações por gênero. Usaremos a API de consulta do OpenSearch para isso.
+Para evitar incorrer em cobranças adicionais, você pode excluir o domínio que criou quando terminar de experimentá-lo.
 
-```python
-def get_average_rating_by_genre(client, index_name, genre):
-    query = {
-        "size": 0, # Não precisamos dos documentos em si, apenas da agregação
-        "aggs": {
-            "avg_rating": {
-                "avg": {
-                    "field": "rating"
-                }
-            }
-        },
-        "query": {
-            "match": {
-                genre: 1
-            }
-        }
-    }
+1. **Excluir o Domínio:**
+    *   Volte para o console do OpenSearch Service.
+    *   Selecione o domínio que você criou.
+    *   Clique em "Ações" e, em seguida, clique em "Excluir domínio".
+    *   Confirme que deseja excluir o domínio digitando `excluir` e clicando em "Excluir".
 
-    response = client.search(
-        body=query,
-        index=index_name
-    )
+## Conclusão
 
-    return response['aggregations']['avg_rating']['value']
-```
-
-1. Agora, vamos iterar por todos os gêneros e obter a classificação média para cada um:
-
-```python
-genres = ['Action', 'Adventure', 'Animation', 'Children\'s', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy',
-          'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western']
-
-for genre in genres:
-    avg_rating = get_average_rating_by_genre(client, index_name, genre)
-    print(f"Average rating for {genre}: {avg_rating}")
-```
-
-**Conclusão do Tutorial**
-
-Neste tutorial, você aprendeu como usar o Amazon OpenSearch Service para analisar um conjunto de dados usando a biblioteca Pandas em Python. Você criou um domínio OpenSearch, preparou e indexou dados e realizou análises usando consultas OpenSearch. Este é apenas um exemplo simples do que você pode fazer com o OpenSearch Service. Você pode explorar recursos mais avançados, como a criação de visualizações com o OpenSearch Dashboards, a configuração de controle de acesso refinado e a integração com outros serviços da AWS para criar pipelines de dados complexos.
-
-Este tutorial fornece uma base sólida para estudantes universitários de ciência da computação do primeiro ano começarem a usar o Amazon OpenSearch Service e a biblioteca Pandas para análise de dados. Lembre-se de excluir seu domínio OpenSearch após concluir o tutorial para evitar cobranças desnecessárias.
+Este tutorial forneceu um guia passo a passo para criar um domínio Amazon OpenSearch Service, indexar dados de amostra e executar pesquisas básicas usando o OpenSearch Dashboards. Seguindo essas etapas, você obteve experiência prática com os principais conceitos e funcionalidades do OpenSearch Service, que podem servir como uma base sólida para exploração e aprendizado adicionais no campo de pesquisa e análise. Lembre-se de explorar a documentação oficial e experimentar diferentes recursos e configurações para aprofundar sua compreensão do Amazon OpenSearch Service.

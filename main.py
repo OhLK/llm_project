@@ -69,8 +69,9 @@ def generate_summary(text, model):
                     Identificar e definir os termos técnicos mais importantes, fornecendo exemplos concretos para ilustrar cada um deles.
                     Organizar as informações de forma lógica e coerente, utilizando subtítulos para melhorar a legibilidade.
                     Destacar as implicações práticas dos conceitos discutidos no texto.
-                    Incluir uma breve introdução e uma conclusão.Após o resumo, crie um tutorial prático, em formato de guia passo a passo, que ensine como aplicar os conceitos do texto. O tutorial deve ser adequado para o mesmo público do resumo (estudantes universitários de ciência da computação do primeiro ano) e deve incluir exemplos de código funcionais e explicações detalhadas de cada etapa. O resumo deve conter ao menos 800 palvras
-                    Após o resumo, crie um tutorial prático, em formato de guia passo a passo, que ensine como aplicar os conceitos do texto usando a biblioteca Pandas em Python. O tutorial deve ser adequado para o mesmo público do resumo (estudantes universitários de ciência da computação do primeiro ano) e deve incluir exemplos de código funcionais e explicações detalhadas de cada etapa.
+                    Incluir uma breve introdução e uma conclusão.Após o resumo, crie um tutorial prático, em formato de guia passo a passo, que ensine como aplicar os conceitos do texto. O tutorial deve ser adequado para o mesmo público do resumo (estudantes universitários de ciência da computação do primeiro ano) e deve incluir exemplos de código funcionais e explicações detalhadas de cada etapa.
+                    O resumo deve conter ao menos 800 palvras
+                    Após o resumo, crie um tutorial prático, em formato de guia passo a passo, O tutorial deve ser adequado para o mesmo público do resumo (estudantes universitários de ciência da computação do primeiro ano) e deve incluir exemplos de código funcionais e explicações detalhadas de cada etapa.
 
                     {text}
 

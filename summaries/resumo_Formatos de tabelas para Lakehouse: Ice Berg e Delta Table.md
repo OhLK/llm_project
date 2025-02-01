@@ -1,219 +1,235 @@
 Resumo gerado para a categoria: Formatos de tabelas para Lakehouse: Ice Berg e Delta Table
 
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, com pelo menos 800 palavras, seguido por um tutorial prático:
+Claro, aqui está um resumo detalhado e informativo do texto fornecido, juntamente com um tutorial prático:
 
-# **Resumo do Texto: Formatos de Tabela Abertos e Delta Lake**
+# Resumo do Texto: Formatos de Tabela Abertos e Apache Iceberg
 
-## **Introdução**
+## Introdução
 
-O texto discute a evolução das tecnologias de gerenciamento de dados, desde os data warehouses tradicionais até os data lakes e, finalmente, a arquitetura de data lakehouse, com foco nos formatos de tabela abertos, como Delta Lake, Apache Iceberg e Apache Hudi. Ele destaca a importância dessas tecnologias para lidar com o volume, a variedade e a velocidade crescentes dos dados na era do big data.
+O texto discute o conceito de formatos de tabela abertos, que são usados para armazenar dados tabulares de uma forma que seja facilmente acessível e interoperável entre várias ferramentas de processamento e análise de dados. Ele se concentra em três formatos de tabela abertos proeminentes: Delta Lake, Apache Iceberg e Apache Hudi. O texto também fornece um tutorial sobre o Apache Iceberg, um formato de tabela aberto para grandes conjuntos de dados analíticos.
 
-## **Data Warehouses Tradicionais e Data Lakes**
+## Principais Conceitos, Teorias e Argumentos
 
-Os **data warehouses** tradicionais eram projetados para dados estruturados e otimizados para consultas SQL. No entanto, eles se mostraram limitados ao lidar com dados não estruturados e semiestruturados, que se tornaram cada vez mais comuns.
+### Formatos de Tabela Abertos
 
-Os **data lakes** surgiram como uma solução para armazenar dados brutos em seu formato nativo, independentemente de sua estrutura. Isso permitiu que as organizações coletassem grandes quantidades de dados de várias fontes sem a necessidade de esquemas predefinidos. No entanto, os data lakes apresentavam desafios em termos de integridade dos dados, consistência e capacidade de lidar com atualizações e exclusões de forma eficiente.
+*   Os formatos de tabela abertos são um formato de arquivo usado para armazenar dados tabulares de uma forma que seja facilmente acessível e interoperável entre várias ferramentas de processamento e análise de dados.
+*   Eles geralmente têm um esquema que define a estrutura da tabela e pode ser usado para uma variedade de tarefas relacionadas a dados e para armazenar uma ampla gama de tipos de dados, incluindo dados estruturados, semiestruturados e não estruturados.
+*   Eles são tipicamente projetados para serem eficientes, escaláveis e para suportar recursos avançados, como versionamento, indexação e transações ACID.
 
-## **Formatos de Tabela Abertos**
+### Delta Lake, Apache Iceberg e Apache Hudi
 
-Os formatos de tabela abertos, como **Delta Lake**, **Apache Iceberg** e **Apache Hudi**, foram desenvolvidos para preencher a lacuna entre os data warehouses e os data lakes. Eles fornecem uma camada de gerenciamento de dados sobre o armazenamento em data lake, permitindo transações ACID, controle de versão de dados e outros recursos que antes eram exclusivos dos data warehouses.
+*   **Delta Lake** é uma camada de armazenamento de código aberto que fica em cima da infraestrutura de data lake existente, construída, por sua vez, em cima de armazenamentos de objetos como o Amazon S3. Ele fornece transações ACID e versionamento para dados armazenados nesses sistemas, permitindo que engenheiros de dados e cientistas de dados construam pipelines de dados robustos e data lakes que sejam altamente escaláveis e confiáveis.
+*   **Apache Iceberg** é outro formato de tabela de código aberto que é projetado para permitir acesso eficiente e escalável a grandes conjuntos de dados em data lakes. Ele fornece um esquema de tabela que é projetado para ser compatível com ferramentas de processamento de dados existentes, como o Apache Spark, e suporta transações ACID, versionamento e evolução de dados.
+*   **Apache Hudi** — que significa Hadoop Upserts Deletes and Incrementals — é uma estrutura de armazenamento e processamento de dados de código aberto que é projetada para permitir acesso e análise de dados em tempo real. Ele fornece suporte para transações ACID, processamento incremental de dados e indexação de dados eficiente, tornando-o uma solução ideal para casos de uso, como processamento de dados de streaming e análise em tempo real.
 
-### **Delta Lake**
+### Comparação de Delta Lake, Iceberg e Hudi
 
-O Delta Lake é uma camada de armazenamento de código aberto que traz confiabilidade para data lakes. Ele fornece transações ACID, tratamento de metadados escalável e unifica o processamento de streaming e em lote. O Delta Lake é totalmente compatível com o Apache Spark e é construído sobre o formato de arquivo Parquet.
+*   **Recursos e casos de uso**: Cada um desses formatos de tabela abertos tem seus próprios pontos fortes e fracos. O Delta Lake é ideal para data lakes e pipelines de dados, o Iceberg é mais adequado para data warehousing e análise, enquanto o Hudi se destaca em seus casos de uso pretendidos de processamento de dados em tempo real e análise de streaming.
+*   **Desempenho**: Cada formato é projetado para otimizar a velocidade de acesso e processamento de dados. O Delta Lake é conhecido por sua alta escalabilidade e confiabilidade, o Iceberg é otimizado para desempenho de consulta rápido e o Hudi é projetado para processamento e indexação de dados incrementais eficientes.
+*   **Fatores a serem considerados ao escolher entre esses formatos**: As necessidades e casos de uso específicos da organização, o tamanho e a complexidade dos conjuntos de dados, os tipos de ferramentas de processamento e análise de dados que serão usados, o nível de experiência da equipe com cada formato e o nível de suporte e documentação da comunidade disponível para cada formato.
+
+### Apache Iceberg
+
+*   O Apache Iceberg é um formato de tabela aberto para grandes conjuntos de dados analíticos que aborda as limitações dos formatos tradicionais como o Apache Parquet e o Apache Avro.
+*   Ele fornece uma solução poderosa e escalável para gerenciar e analisar conjuntos de dados de grande escala em sistemas distribuídos.
+*   **Importância do Iceberg**: O Iceberg aborda as necessidades em evolução do gerenciamento de big data, permitindo evolução eficiente de esquemas, garantindo consistência de dados, suportando análise histórica, otimizando o desempenho de consultas e oferecendo compatibilidade com frameworks populares de processamento de dados.
+*   **Principais recursos e vantagens**: Evolução de esquemas, transações ACID, viagem no tempo, particionamento e indexação eficientes, gerenciamento centralizado de metadados, compatibilidade com frameworks populares, escalabilidade e suporte ativo da comunidade.
+*   **Integração com frameworks de processamento de dados**: O Iceberg se integra perfeitamente com frameworks de processamento de dados populares como o Apache Spark, o Apache Flink e o Presto, permitindo que os usuários aproveitem o poder do Iceberg para gerenciar e processar conjuntos de dados de grande escala dentro de seus frameworks preferidos.
+*   **Evolução de esquemas**: O Iceberg suporta a evolução de esquemas, permitindo que os usuários modifiquem a estrutura de seus conjuntos de dados sem perder ou invalidar os dados existentes. Ele fornece mecanismos como metadados e particionamento para facilitar a evolução e o versionamento de esquemas.
+*   **Transações**: O Iceberg fornece garantias ACID (Atomicidade, Consistência, Isolamento e Durabilidade) ao realizar operações de gravação em tabelas, garantindo que as alterações nos dados sejam aplicadas de forma confiável e consistente.
+*   **Viagem no tempo**: O recurso de viagem no tempo do Iceberg permite que os usuários consultem e acessem snapshots históricos dos dados armazenados nas tabelas do Iceberg, permitindo a análise histórica, a exploração da evolução de esquemas, a recuperação de dados e o suporte à conformidade.
+*   **Particionamento e indexação**: O Iceberg suporta várias estratégias de particionamento para otimizar a organização dos dados e melhorar o desempenho das consultas. Embora o Iceberg não tenha mecanismos de indexação nativos, ele fornece recursos e estratégias que podem ser aproveitados para otimizar o desempenho das consultas e obter benefícios semelhantes.
+*   **Gerenciamento de metadados**: O Iceberg fornece mecanismos e melhores práticas para gerenciar metadados de forma eficaz, garantindo consistência de dados, otimizando o desempenho das consultas e permitindo a evolução eficiente de esquemas.
+*   **Integração com sistemas de catálogo e mecanismos de consulta**: O Iceberg se integra perfeitamente com vários sistemas de catálogo e mecanismos de consulta, permitindo que os usuários aproveitem as tabelas do Iceberg em seu ecossistema de processamento de dados preferido.
+*   **Transformações e operações de dados**: O Iceberg fornece recursos e ferramentas que permitem aos usuários realizar várias transformações e operações em seus dados de forma eficiente.
+*   **Otimização de desempenho**: O Iceberg oferece várias técnicas de otimização de desempenho para melhorar a eficiência das tarefas de processamento e consulta de dados.
+*   **Arquivamento e retenção de dados**: O Iceberg suporta estratégias para arquivar e reter dados, garantindo a utilização eficiente do armazenamento e o gerenciamento do ciclo de vida dos dados.
+*   **Operações de dados em grande escala**: O Iceberg fornece estratégias para lidar com operações de dados em grande escala de forma eficaz, garantindo escalabilidade, desempenho e confiabilidade.
+*   **Recursos avançados e desenvolvimentos futuros**: O Iceberg continua a evoluir e introduzir recursos avançados para aprimorar seus recursos para gerenciamento de big data.
+*   **Casos de uso**: O Iceberg é usado por empresas como Netflix, Airbnb e Uber para gerenciar seus data lakes e aprimorar os recursos de gerenciamento e análise de dados.
+
+## Implicações Práticas
+
+Os conceitos discutidos no texto têm implicações práticas significativas para organizações que lidam com grandes volumes de dados. Ao adotar formatos de tabela abertos como Delta Lake, Apache Iceberg e Apache Hudi, as organizações podem:
 
-### **Apache Iceberg**
+1. **Melhorar a acessibilidade e a interoperabilidade dos dados**: Os formatos de tabela abertos permitem que as organizações armazenem dados de uma forma que seja facilmente acessível e interoperável entre várias ferramentas de processamento e análise de dados. Isso pode ajudar a quebrar os silos de dados e permitir que as organizações obtenham mais valor de seus dados.
+2. **Construir pipelines de dados e data lakes mais robustos**: Os formatos de tabela abertos fornecem recursos como transações ACID e versionamento, que podem ajudar as organizações a construir pipelines de dados e data lakes mais robustos, que sejam altamente escaláveis e confiáveis.
+3. **Habilitar análise em tempo real**: Formatos como o Apache Hudi permitem que as organizações realizem análises em tempo real em seus dados, o que pode ajudá-las a obter insights e tomar decisões orientadas por dados em tempo quase real.
+4. **Otimizar o desempenho das consultas**: Formatos como o Apache Iceberg fornecem recursos como particionamento e indexação, que podem ajudar as organizações a otimizar o desempenho das consultas e obter insights de seus dados mais rapidamente.
+5. **Gerenciar a evolução de esquemas**: Os formatos de tabela abertos suportam a evolução de esquemas, permitindo que as organizações modifiquem a estrutura de seus conjuntos de dados sem perder ou invalidar os dados existentes. Isso pode ajudar as organizações a se adaptarem às mudanças nos requisitos de negócios e a evitar migrações de dados caras e demoradas.
+6. **Garantir a consistência e a integridade dos dados**: Os formatos de tabela abertos fornecem garantias ACID, garantindo que as alterações nos dados sejam aplicadas de forma confiável e consistente. Isso pode ajudar as organizações a manter a integridade dos dados e evitar a corrupção de dados.
+7. **Habilitar a análise histórica e a viagem no tempo**: Formatos como o Apache Iceberg permitem que as organizações consultem e acessem snapshots históricos de seus dados, permitindo a análise histórica, a exploração da evolução de esquemas, a recuperação de dados e o suporte à conformidade.
+8. **Simplificar o gerenciamento de dados**: Os formatos de tabela abertos fornecem mecanismos e melhores práticas para gerenciar metadados de forma eficaz, garantindo consistência de dados, otimizando o desempenho das consultas e permitindo a evolução eficiente de esquemas.
 
-O Apache Iceberg é outro formato de tabela aberto projetado para grandes conjuntos de dados analíticos. Ele suporta evolução de esquema, particionamento oculto, viagem no tempo (consulta de dados históricos) e reversões. O Iceberg é independente do mecanismo de computação e pode ser usado com Spark, Flink, Presto e outros mecanismos.
+## Conclusão
 
-### **Apache Hudi**
+O texto destaca a importância dos formatos de tabela abertos no gerenciamento e análise de big data. Ele fornece uma visão geral de três formatos populares de tabela abertos: Delta Lake, Apache Iceberg e Apache Hudi, comparando seus recursos, desempenho e fatores a serem considerados ao escolher entre eles. O texto também se aprofunda no Apache Iceberg, discutindo seus principais recursos, vantagens, integração com frameworks de processamento de dados, evolução de esquemas, transações, viagem no tempo, particionamento, indexação, gerenciamento de metadados, integração com sistemas de catálogo e mecanismos de consulta, transformações e operações de dados, otimização de desempenho, arquivamento e retenção de dados, operações de dados em grande escala, recursos avançados e desenvolvimentos futuros. Ao adotar formatos de tabela abertos, as organizações podem melhorar a acessibilidade dos dados, construir pipelines de dados e data lakes mais robustos, habilitar análises em tempo real, otimizar o desempenho das consultas, gerenciar a evolução de esquemas, garantir a consistência e a integridade dos dados, habilitar a análise histórica e a viagem no tempo e simplificar o gerenciamento de dados.
 
-O Apache Hudi (Hadoop Upserts Deletes and Incrementals) é uma estrutura de armazenamento de dados que permite ingestão e gerenciamento de dados incrementais em data lakes. Ele fornece suporte para transações ACID, processamento incremental e indexação eficiente de dados, tornando-o adequado para casos de uso como processamento de dados de streaming e análises em tempo real.
+## Tutorial Prático: Introdução ao Apache Iceberg
 
-## **Comparação de Recursos**
+Este tutorial fornece um guia passo a passo para aplicar os conceitos do texto, usando o Apache Iceberg como exemplo. O tutorial é adequado para estudantes universitários do primeiro ano de ciência da computação e inclui exemplos de código funcionais e explicações detalhadas de cada etapa.
 
-O texto fornece uma comparação detalhada dos recursos do Delta Lake, Iceberg e Hudi, destacando seus pontos fortes e fracos.
+### Pré-requisitos
 
-| Recurso | Delta Lake | Apache Iceberg | Apache Hudi |
-|---|---|---|---|
-| Transações ACID | Sim | Sim | Sim |
-| Viagem no tempo | Sim | Sim | Sim |
-| Evolução do esquema | Sim | Sim | Sim |
-| Particionamento | Sim | Particionamento oculto | Sim |
-| Mesclagem/Atualização/Exclusão | Sim | Sim | Sim |
-| Suporte a streaming | Sim | Sim | Sim |
-| Concorrência | OCC | OCC | OCC e MVCC |
-| Indexação | Não | Não | Sim |
-| Ingestão de dados | Databricks Autoloader | Não | DeltaStreamer |
+*   Conhecimento básico de Python e SQL.
+*   Um ambiente Python configurado (por exemplo, usando o Conda).
+*   Acesso a um cluster Spark (local ou baseado em nuvem).
 
-## **Comparação de Desempenho**
+### Etapa 1: Configurar o Ambiente
 
-O texto também discute o desempenho desses formatos de tabela abertos, referenciando benchmarks que mostram que o Delta Lake e o Hudi geralmente têm desempenho semelhante, enquanto o Iceberg pode ficar para trás em alguns cenários. No entanto, ele enfatiza que os benchmarks do mundo real podem variar e que as organizações devem realizar seus próprios testes com base em suas cargas de trabalho específicas.
+1. **Instalar as bibliotecas necessárias**:
 
-## **Serviços de Plataforma**
+    ```bash
+    conda create -n iceberg-tutorial python=3.8
+    conda activate iceberg-tutorial
+    pip install pyspark==3.1.2
+    pip install pyarrow==4.0.0
+    ```
+2. **Iniciar uma sessão Spark**:
 
-Além dos recursos principais de formato de tabela, o texto destaca a importância dos serviços de plataforma que facilitam o desenvolvimento e o gerenciamento de implantações de data lake. Ele menciona que o Apache Hudi se destaca nessa área, oferecendo um conjunto abrangente de serviços de plataforma, incluindo controle de simultaneidade, compactação, clustering e indexação.
+    ```python
+    from pyspark.sql import SparkSession
 
-## **Adoção na Comunidade e Inovação**
+    spark = SparkSession.builder \
+        .appName("IcebergTutorial") \
+        .config("spark.jars.packages", "org.apache.iceberg:iceberg-spark-runtime-3.1_2.12:0.13.1") \
+        .config("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions") \
+        .config("spark.sql.catalog.spark_catalog", "org.apache.iceberg.spark.SparkSessionCatalog") \
+        .config("spark.sql.catalog.spark_catalog.type", "hadoop") \
+        .config("spark.sql.catalog.spark_catalog.warehouse", "warehouse") \
+        .getOrCreate()
+    ```
 
-O texto compara a adoção na comunidade e a inovação do Delta Lake, Iceberg e Hudi. Ele observa que o Delta Lake tem a maior comunidade e o maior número de contribuidores, enquanto o Hudi e o Iceberg têm comunidades menores, mas ainda ativas. Ele também destaca a inovação contínua no espaço do data lakehouse, com o Hudi sendo pioneiro em muitos recursos que agora estão sendo adotados por outros projetos.
+### Etapa 2: Criar uma Tabela Iceberg
+
+1. **Definir o esquema da tabela**:
 
-## **Casos de Uso**
+    ```python
+    from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 
-O texto fornece exemplos de como organizações como Uber, Netflix, Amazon e Walmart estão usando esses formatos de tabela abertos para construir e gerenciar seus data lakes. Esses casos de uso demonstram a aplicabilidade dessas tecnologias em vários setores e para diferentes tipos de cargas de trabalho.
+    schema = StructType([
+        StructField("id", IntegerType(), False),
+        StructField("name", StringType(), True),
+        StructField("age", IntegerType(), True),
+        StructField("city", StringType(), True)
+    ])
+    ```
+2. **Criar a tabela usando o SQL**:
 
-## **Data Lakehouse**
+    ```python
+    spark.sql("""
+        CREATE TABLE spark_catalog.default.people (
+            id INT,
+            name STRING,
+            age INT,
+            city STRING
+        )
+        USING iceberg
+        PARTITIONED BY (city)
+    """)
+    ```
 
-O texto introduz o conceito de **data lakehouse**, que combina a flexibilidade dos data lakes com os recursos de gerenciamento de dados e desempenho dos data warehouses. O Delta Lake, em particular, é apresentado como uma tecnologia chave para a construção de data lakehouses, pois fornece uma base para armazenar dados estruturados e não estruturados, ao mesmo tempo em que oferece suporte a transações ACID e outros recursos essenciais para análises confiáveis.
+### Etapa 3: Inserir Dados na Tabela
 
-## **Gerenciamento de Metadados e o Dataswamp**
+1. **Criar um DataFrame de amostra**:
 
-O texto discute a importância do gerenciamento de metadados para entender a origem e o contexto dos dados. O Delta Lake aborda essa necessidade, permitindo o registro de informações de metadados diretamente no próprio repositório, garantindo rastreabilidade e auditabilidade. Ele também aborda o conceito de **"Dataswamp"**, que se refere ao desafio enfrentado quando os dados em um data lake estão desorganizados e mal documentados. O Delta Lake ajuda a evitar esse problema, mantendo a integridade dos dados e garantindo a qualidade das informações.
+    ```python
+    data = [(1, "Alice", 30, "New York"),
+            (2, "Bob", 25, "Los Angeles"),
+            (3, "Charlie", 35, "New York"),
+            (4, "David", 40, "Chicago"),
+            (5, "Eve", 28, "Los Angeles")]
 
-## **Formato de Arquivo e Vantagens**
+    df = spark.createDataFrame(data, schema=schema)
+    ```
+2. **Inserir os dados na tabela Iceberg**:
 
-O Delta Lake utiliza um formato de arquivo otimizado que suporta dados estruturados e não estruturados. Isso permite que diferentes tipos de dados sejam armazenados de forma eficiente, reduzindo a necessidade de conversões frequentes. Além disso, o Delta Lake oferece transações ACID para manter a integridade dos dados, garantindo que as operações sejam confiáveis, mesmo em ambientes de alta concorrência.
+    ```python
+    df.writeTo("spark_catalog.default.people").append()
+    ```
 
-## **Vantagens e Desvantagens do Delta Lake**
+### Etapa 4: Consultar a Tabela
 
-O texto lista as vantagens e desvantagens do Delta Lake:
+1. **Ler os dados da tabela**:
 
-**Vantagens:**
-*   Flexibilidade: Permite armazenar dados em sua forma original, sem estruturação prévia.
-*   Confiabilidade: Fornece garantias de transações ACID para operações de análise.
-*   Compatibilidade: Pode ser usado com ferramentas e plataformas existentes, entre elas o Apache Spark e até mesmo o Pandas.
-*   Processamento Analítico: Melhora a eficiência do processamento analítico, reduzindo a necessidade de transformações de dados.
-*   Escalabilidade: Lida bem com grandes volumes de dados.
+    ```python
+    spark.read.format("iceberg").load("spark_catalog.default.people").show()
+    ```
+2. **Filtrar os dados**:
 
-**Desvantagens:**
-*   Complexidade: Pode exigir um entendimento mais profundo de suas características para otimização.
-*   Sobrecarga: As operações ACID podem adicionar uma sobrecarga ao processamento.
-*   Aprendizado: As equipes podem precisar aprender a implementar corretamente as operações do Delta Lake.
+    ```python
+    spark.read.format("iceberg").load("spark_catalog.default.people").filter("age > 30").show()
+    ```
 
-## **Conclusão**
+### Etapa 5: Atualizar a Tabela
 
-O texto conclui que o Delta Lake é um avanço significativo na evolução dos data lakes e data warehouses, oferecendo a flexibilidade do primeiro com a confiabilidade do segundo. Ele se posiciona como uma solução eficaz para gerenciar e analisar o volume exponencial de dados do mundo moderno. Seu papel na reconciliação entre o processamento e o armazenamento de dados é vital para o sucesso das análises de Big Data.
+1. **Atualizar os dados na tabela**:
 
----
+    ```python
+    spark.sql("UPDATE spark_catalog.default.people SET age = 31 WHERE id = 1")
+    ```
+2. **Verificar os dados atualizados**:
 
-# **Tutorial Prático: Operações Comuns do Delta Lake Usando Pandas**
+    ```python
+    spark.read.format("iceberg").load("spark_catalog.default.people").show()
+    ```
 
-Este tutorial demonstrará como aplicar os conceitos do Delta Lake usando a biblioteca Pandas em Python. Ele é voltado para estudantes universitários de ciência da computação do primeiro ano e pressupõe familiaridade básica com Python e Pandas.
+### Etapa 6: Excluir Dados da Tabela
 
-## **Pré-requisitos**
+1. **Excluir dados da tabela**:
 
-*   Python 3.7 ou superior
-*   Pandas
-*   deltalake
+    ```python
+    spark.sql("DELETE FROM spark_catalog.default.people WHERE city = 'Chicago'")
+    ```
+2. **Verificar os dados excluídos**:
 
-Você pode instalar as bibliotecas necessárias usando pip:
+    ```python
+    spark.read.format("iceberg").load("spark_catalog.default.people").show()
+    ```
 
-```bash
-pip install pandas deltalake
-```
+### Etapa 7: Viagem no Tempo
 
-## **Etapa 1: Importar Bibliotecas**
+1. **Visualizar o histórico da tabela**:
 
-```python
-import pandas as pd
-from deltalake import DeltaTable, write_deltalake
-```
+    ```python
+    spark.sql("SELECT * FROM spark_catalog.default.people.history").show()
+    ```
+2. **Consultar um snapshot anterior da tabela**:
 
-## **Etapa 2: Criar um DataFrame do Pandas**
+    ```python
+    # Substitua 'your_timestamp' pelo timestamp do snapshot desejado
+    snapshot_timestamp = 'your_timestamp'
+    spark.read.format("iceberg").option("as-of-timestamp", snapshot_timestamp).load("spark_catalog.default.people").show()
+    ```
 
-Vamos criar um DataFrame simples do Pandas que usaremos para demonstrar as operações do Delta Lake.
+### Etapa 8: Evolução de Esquemas
 
-```python
-data = {
-    'id': [1, 2, 3, 4, 5],
-    'nome': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
-    'idade': [25, 30, 22, 35, 28],
-    'cidade': ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Brasília', 'Salvador']
-}
-df = pd.DataFrame(data)
-```
+1. **Adicionar uma nova coluna à tabela**:
 
-## **Etapa 3: Gravar o DataFrame em uma Tabela Delta**
+    ```python
+    spark.sql("ALTER TABLE spark_catalog.default.people ADD COLUMN email STRING")
+    ```
+2. **Inserir dados com a nova coluna**:
 
-Agora, vamos gravar o DataFrame em uma tabela Delta.
+    ```python
+    new_data = [(6, "Frank", 45, "Boston", "frank@example.com"),
+                (7, "Grace", 32, "New York", "grace@example.com")]
 
-```python
-write_deltalake('caminho/para/tabela_delta', df)
-```
+    new_df = spark.createDataFrame(new_data, ["id", "name", "age", "city", "email"])
+    new_df.writeTo("spark_catalog.default.people").append()
+    ```
+3. **Verificar os dados atualizados**:
 
-Substitua `'caminho/para/tabela_delta'` pelo caminho onde você deseja armazenar a tabela Delta.
+    ```python
+    spark.read.format("iceberg").load("spark_catalog.default.people").show()
+    ```
 
-## **Etapa 4: Ler a Tabela Delta**
+### Etapa 9: Limpeza
 
-Vamos ler a tabela Delta de volta para um DataFrame do Pandas.
+1. **Encerrar a sessão Spark**:
 
-```python
-dt = DeltaTable('caminho/para/tabela_delta')
-df_lido = dt.to_pandas()
-print(df_lido)
-```
+    ```python
+    spark.stop()
+    ```
 
-## **Etapa 5: Atualizar a Tabela Delta**
-
-Vamos atualizar a idade de Bob para 32 anos.
-
-```python
-df_atualizado = df_lido.copy()
-df_atualizado.loc[df_atualizado['nome'] == 'Bob', 'idade'] = 32
-write_deltalake('caminho/para/tabela_delta', df_atualizado, mode='overwrite')
-```
-
-## **Etapa 6: Excluir da Tabela Delta**
-
-Vamos excluir a linha de Charlie da tabela Delta. Isso é um pouco mais complicado com Pandas, pois precisamos filtrar os dados antes de gravar.
-
-```python
-df_filtrado = df_lido[df_lido['nome'] != 'Charlie']
-write_deltalake('caminho/para/tabela_delta', df_filtrado, mode='overwrite')
-```
-
-## **Etapa 7: Viagem no Tempo (Time Travel)**
-
-Vamos consultar uma versão anterior da tabela Delta. Primeiro, precisamos obter o histórico de versões:
-
-```python
-versoes = dt.history()
-print(versoes)
-```
-
-Agora, vamos ler a versão 0 da tabela:
-
-```python
-df_versao_0 = DeltaTable('caminho/para/tabela_delta', version=0).to_pandas()
-print(df_versao_0)
-```
-
-## **Etapa 8: Mesclar (Upsert) na Tabela Delta**
-
-Vamos adicionar um novo registro para "Frank" e atualizar a idade de "Eve" para 29.
-
-```python
-novos_dados = pd.DataFrame({
-    'id': [6, 5],
-    'nome': ['Frank', 'Eve'],
-    'idade': [40, 29],
-    'cidade': ['Porto Alegre', 'Salvador']
-})
-
-# Para mesclar com Pandas, precisamos concatenar e depois remover duplicatas com base no ID
-df_mesclado = pd.concat([df_lido, novos_dados])
-df_mesclado = df_mesclado.drop_duplicates(subset=['id'], keep='last')
-
-write_deltalake('caminho/para/tabela_delta', df_mesclado, mode='overwrite')
-```
-
-## **Explicações Detalhadas**
-
-*   **write_deltalake()**: Esta função da biblioteca `deltalake` é usada para gravar um DataFrame do Pandas em uma tabela Delta. O parâmetro `mode` pode ser 'append', 'overwrite', 'errorifexists' ou 'ignore'.
-*   **DeltaTable()**: Esta classe representa uma tabela Delta e fornece métodos para interagir com ela.
-*   **to_pandas()**: Este método converte uma tabela Delta em um DataFrame do Pandas.
-*   **history()**: Este método retorna o histórico de versões da tabela Delta.
-*   **mode='overwrite'**: Ao gravar em uma tabela Delta, `mode='overwrite'` substitui os dados existentes na tabela.
-*   **Mesclagem com Pandas**: A mesclagem (upsert) é feita concatenando os DataFrames antigos e novos e, em seguida, removendo as duplicatas com base em uma chave primária (neste caso, 'id').
-
-Este tutorial fornece uma introdução básica às operações do Delta Lake usando Pandas. O Delta Lake oferece muitos outros recursos, como evolução de esquema, validação de dados e otimizações de desempenho, que você pode explorar à medida que se familiariza com a tecnologia.
+Este tutorial demonstra como configurar um ambiente para usar o Apache Iceberg, criar uma tabela Iceberg, inserir dados, consultar a tabela, atualizar e excluir dados, realizar viagens no tempo e evoluir o esquema da tabela. Seguindo essas etapas, os alunos do primeiro ano de ciência da computação podem obter uma compreensão prática de como aplicar os conceitos do texto em um cenário do mundo real.
