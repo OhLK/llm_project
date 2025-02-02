@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Banco de Dados orientados à Chave Valor com Redis
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, seguido por um tutorial prático:
-
 # Resumo do Artigo: Plataforma Colaborativa All-in-one para Desenvolvimento de API - Apidog e Redis
 
 ## Introdução

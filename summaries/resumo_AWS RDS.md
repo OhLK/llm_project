@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: AWS RDS
-
-Claro, aqui está um resumo detalhado e informativo do Amazon RDS, seguido por um tutorial prático:
-
 # Resumo do Amazon RDS para Estudantes Universitários de Ciência da Computação
 
 ## Introdução

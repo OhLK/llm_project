@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Data Fabric
-
-Claro, aqui está um resumo detalhado e informativo do artigo fornecido, juntamente com um tutorial prático:
-
 # Resumo do Artigo: Data Fabric
 
 ## Introdução

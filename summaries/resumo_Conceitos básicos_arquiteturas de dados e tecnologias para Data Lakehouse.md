@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Conceitos básicos_arquiteturas de dados e tecnologias para Data Lakehouse
-
-Claro, aqui está o resumo do texto em formato Markdown:
-
 # Resumo do Artigo: "A arquitetura Lakehouse surgiu para que você possa reduzir os custos, esforços e o tempo para gerenciar os dados da sua organização"
 
 ## Introdução

@@ -37,6 +37,6 @@ def create_book(directory, output_filename):
 
 if __name__ == "__main__":
     directory = "summaries"  # Nome da pasta com os arquivos .md
-    output_filename = "Bíblia_de_Engenharia_de_dados.md"
+    output_filename = "Bíblia de Engenharia de dados.md"
     create_book(directory, output_filename)
     print(f"Livro criado com sucesso: {output_filename}")

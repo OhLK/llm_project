@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Conceitos básicos_arquiteturas de dados e tecnologias para Data Mesh
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, com mais de 800 palavras, seguido por um tutorial prático:
-
 # Resumo do Texto: Data Mesh
 
 ## Introdução

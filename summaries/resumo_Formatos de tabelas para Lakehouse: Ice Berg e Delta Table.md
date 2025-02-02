@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Formatos de tabelas para Lakehouse: Ice Berg e Delta Table
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, juntamente com um tutorial prático:
-
 # Resumo do Texto: Formatos de Tabela Abertos e Apache Iceberg
 
 ## Introdução

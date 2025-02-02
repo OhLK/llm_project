@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Apache Airflow
-
-Claro, aqui está um resumo detalhado e informativo do texto que você forneceu, seguido por um tutorial prático:
-
 # Resumo do Apache Airflow
 
 ## Introdução

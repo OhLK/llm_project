@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: AWS S3
-
-Claro, aqui está um resumo detalhado e informativo do texto sobre o Amazon S3, seguido por um tutorial prático:
-
 # Resumo do Amazon S3 para Estudantes de Ciência da Computação
 
 ## Introdução

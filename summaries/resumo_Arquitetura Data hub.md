@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Arquitetura Data hub
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, com pelo menos 800 palavras, seguido por um tutorial prático:
-
 # Resumo do Texto: Data Lakes, Data Hubs e Data Warehouses
 
 ## Introdução

@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Apache Spark
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, adequado para estudantes universitários de ciência da computação do primeiro ano, com um tutorial prático:
-
 # Resumo do Apache Spark
 
 ## Introdução

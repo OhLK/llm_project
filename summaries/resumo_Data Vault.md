@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Data Vault
-
-Claro, aqui está um resumo acadêmico detalhado e informativo, com mais de 800 palavras, sobre o artigo "Data Vault Modeling Guide" de Hans Hultgren, juntamente com um tutorial prático sobre como aplicar os conceitos do texto:
-
 # Resumo Acadêmico: Guia de Modelagem Data Vault
 
 ## Introdução

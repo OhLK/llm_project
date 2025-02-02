@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Governança de dados
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, adequado para estudantes universitários de ciência da computação do primeiro ano, seguido de um tutorial prático:
-
 # Resumo do Texto sobre Governança de Dados
 
 ## Introdução

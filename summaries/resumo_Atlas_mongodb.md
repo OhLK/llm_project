@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Atlas_mongodb
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, juntamente com um tutorial prático:
-
 # Resumo de Modelagem de Dados no MongoDB
 
 ## Introdução

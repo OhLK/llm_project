@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Plataformas de metadados para Governança de dados: Datahub e Openmetadata
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, com mais de 800 palavras, seguido de um tutorial prático:
-
 # **Resumo: DataHub e OpenMetadata - Plataformas de Metadados para Governança de Dados**
 
 ## **Introdução**

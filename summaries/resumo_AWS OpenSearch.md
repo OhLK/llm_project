@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: AWS OpenSearch
-
-Claro, aqui está um resumo acadêmico detalhado e informativo do texto que você forneceu, seguido por um tutorial prático:
-
 # Resumo Acadêmico: Introdução ao Amazon OpenSearch Service
 
 ## Introdução

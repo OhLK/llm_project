@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Pandas
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, adequado para estudantes universitários de ciência da computação do primeiro ano:
-
 # Resumo do Texto: Introdução à Biblioteca Pandas em Python
 
 ## Introdução

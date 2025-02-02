@@ -1,7 +1,3 @@
-Resumo gerado para a categoria: Formatos de arquivos colunares: Parquet e ORC
-
-Claro, aqui está um resumo detalhado e informativo do texto fornecido, seguido por um tutorial prático:
-
 # Resumo de Formatos de Arquivos para Big Data: Avro, ORC e Parquet
 
 ## Introdução
